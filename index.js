@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('sassdoc-theme-dark');
+module.exports = require('sassdoc-theme-light');
