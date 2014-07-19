@@ -1,11 +1,11 @@
 {
   "name": "sassdoc-theme-default",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/SassDoc/sassdoc-theme-default.git"
   },
   "dependencies": {
-    "sassdoc-theme-dark": "0.*"
+    "sassdoc-theme-light": "0.*"
   }
 }
