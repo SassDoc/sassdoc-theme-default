@@ -6,6 +6,6 @@
     "url": "https://github.com/SassDoc/sassdoc-theme-default.git"
   },
   "dependencies": {
-    "sassdoc-theme-light": "^1.2.0"
+    "sassdoc-theme-light": "^1.3.0"
   }
 }
