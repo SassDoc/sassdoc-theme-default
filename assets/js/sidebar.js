@@ -15,6 +15,9 @@
       // Toggle button
       toggleBtn: '.js-btn-toggle',
 
+      // Initial collapse
+      initialCollapse: true,
+
       // Automatic initialization
       init: true
     }, conf || {});
@@ -91,15 +94,16 @@
    */
   Sidebar.prototype.bind = function () {
     var $item, slug, fn, text;
+    var $toggleBtn = $(this.conf.toggleBtn);
     var collapsed = false;
 
     // Save index in localStorage
     global.onbeforeunload = $.proxy(function () {
-      this.save();
+      // this.save(); // Seems to do more harm than good
     }, this);
 
     // Toggle all
-    $(this.conf.toggleBtn).on('click', $.proxy(function (event) {
+    $toggleBtn.on('click', $.proxy(function (event) {
       $node = $(event.target);
 
       text = $node.attr('data-alt');
@@ -121,6 +125,10 @@
       this.save();
     }, this));
 
+    if (global.localStorage.getItem(this.conf.storageKey) === null && this.conf.initialCollapse !== false) {
+      $toggleBtn.trigger('click');
+    }
+
     // Toggle item
     this.conf.nodes.on('click', $.proxy(function (event) {
       $item = $(event.target);
@@ -128,6 +136,7 @@
 
       // Update index
       this.index[slug] = !this.index[slug];
+      this.save();
 
       // Update DOM
       $item.toggleClass(this.conf.collapsedClass);
