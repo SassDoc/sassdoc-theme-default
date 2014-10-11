@@ -1,11 +1,25 @@
 {
   "name": "sassdoc-theme-default",
-  "version": "1.6.0",
+  "description": "SassDoc's default theme",
+  "title": "SassDoc Default Theme",
+  "author": "SassDoc team",
+  "version": "1.7.0",
+  "keywords": [
+    "sassdoc-theme"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/SassDoc/sassdoc-theme-default.git"
   },
   "dependencies": {
-    "sassdoc-theme-light": "^1.6.0"
+    "extend": "1.*",
+    "swig": "1.4.0",
+    "swig-extras": "0.*",
+    "themeleon": "1.*",
+    "themeleon-swig": "0.*",
+    "sassdoc-extras": "^1.0.0"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.4.15"
   }
 }
