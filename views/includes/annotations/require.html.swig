@@ -11,7 +11,7 @@
     {% if require.external %}
       <li>
         {% if require.url %}
-          <a href="{{ require.url}}"><code>{{ require.name }}</code></a>  {{ require.description }}</li>
+          <a href="{{ require.url }}"><code>{{ require.name }}</code></a>  {{ require.description }}</li>
         {% else %}
           <code>{{ require.name }}</code>
         {% endif %}

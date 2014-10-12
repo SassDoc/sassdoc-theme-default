@@ -5,7 +5,7 @@
   {% if item.type[0] == "*" %}
     Any
   {% else %}
-    <code>{{ item.type[0] | split('|') | trim | capitalize | join('</code>, <code>') | safe }}</code>
+    <code>{{ item.type[0]|split('|')|trim|capitalize|join('</code>, <code>')|safe }}</code>
   {% endif %}
   </p>
 {% endif %}

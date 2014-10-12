@@ -44,10 +44,10 @@ module.exports = function (dest, ctx) {
   }
 
   ctx.view.display.annotations = {
-    'function': ['description', 'parameters', 'returns', 'example', 'throws', 'requires', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
-    'mixin': ['description', 'parameters', 'output', 'example', 'throws', 'requires', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
-    'placeholder': ['description', 'example', 'throws', 'requires', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
-    'variable': ['description', 'type', 'prop', 'requires', 'example', 'usedby', 'since', 'see', 'todo', 'link', 'author']
+    'function': ['description', 'parameter', 'return', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
+    'mixin': ['description', 'parameter', 'output', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
+    'placeholder': ['description', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
+    'variable': ['description', 'type', 'property', 'require', 'example', 'usedby', 'since', 'see', 'todo', 'link', 'author']
   };
 
   sassdocExtras.markdown(ctx);
