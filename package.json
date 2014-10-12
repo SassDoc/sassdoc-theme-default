@@ -15,8 +15,7 @@
     "extend": "1.*",
     "swig": "1.4.0",
     "swig-extras": "0.*",
-    "themeleon": "1.*",
-    "themeleon-swig": "0.*",
+    "themeleon": "2.*",
     "sassdoc-extras": "^1.0.0"
   },
   "devDependencies": {

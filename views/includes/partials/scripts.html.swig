@@ -14,4 +14,4 @@
 {% if view.trackingCode %}
 {{ view.trackingCode }}
 {% endif %}
-<script src="assets/js/main.min.js"></script>
+<script src="{{ base }}/assets/js/main.min.js"></script>
