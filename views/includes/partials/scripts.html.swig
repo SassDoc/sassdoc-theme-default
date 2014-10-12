@@ -10,7 +10,8 @@
     s.parentNode.insertBefore(g, s);
   }(document));
 </script>
-{% else if view.trackingCode %}
+{% endif %}
+{% if view.trackingCode %}
 {{ view.trackingCode }}
 {% endif %}
 <script src="assets/js/main.min.js"></script>
