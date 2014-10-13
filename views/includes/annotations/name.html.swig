@@ -14,7 +14,7 @@
   {% endif %}
 
   {% if item.alias %}
-    <span class="item__alias">(alias for <a href="#{{ item.context.type }}-{{ item.alias[0] }}"><code>{{ item.alias[0] }}</code></a>)</span>
+    <span class="item__alias">(alias for <a href="#{{ item.context.type }}-{{ item.alias }}"><code>{{ item.alias }}</code></a>)</span>
   {% endif %}
 </h3>
 
