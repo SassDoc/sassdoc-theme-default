@@ -1,4 +1,4 @@
-{% if item.prop.length > 0 %}
+{% if item.property.length > 0 %}
 
 <h3 class="item__sub-heading">Map structure</h3>
 
@@ -13,12 +13,12 @@
   </thead>
 
   <tbody>
-    {% for prop in item.prop %}
+    {% for prop in item.property %}
       <tr class="item__parameter">
         <th scope="row" data-label="name"><code>{{ prop.name }}</code></th>
-        <td data-label="desc">{{ prop.htmlDescription | default('&mdash;<span class="visually-hidden"> none</span>') | safe }}</td>
+        <td data-label="desc">{{ prop.description | default('&mdash;<span class="visually-hidden"> none</span>') | safe }}</td>
         <td data-label="type">
-        {{ prop.type | split('|') | trim | capitalize | join(', ') }}
+        {{ prop.type|split('|')|trim|capitalize|join(', ') }}
         </td>
         <td data-label="default">
         {% if not prop.default %}

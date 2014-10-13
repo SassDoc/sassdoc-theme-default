@@ -1,6 +1,6 @@
 <h3 class="item__sub-heading">Parameters</h3>
 
-{% if item.parameters.length > 0 %}
+{% if item.parameter.length > 0 %}
 
   <table class="item__parameters">
     <thead>
@@ -12,15 +12,15 @@
       </tr>
     </thead>
     <tbody>
-      {% for parameter in item.parameters %}
+      {% for parameter in item.parameter %}
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>${{ parameter.name }}</code></th>
-          <td data-label="desc">{{ parameter.htmlDescription | default('&mdash;<span class="visually-hidden"> none</span>') | safe }}</td>
+          <td data-label="desc">{{ parameter.description|default('&mdash;<span class="visually-hidden"> none</span>')|safe }}</td>
           <td data-label="type">
           {% if parameter.type == '*' %}
             Any
           {% else %}
-            {{ parameter.type | split('|') | trim | capitalize | join(', ')}}
+            {{ parameter.type|split('|')|trim|capitalize|join(', ')}}
           {% endif %}
           </td>
           <td data-label="default">

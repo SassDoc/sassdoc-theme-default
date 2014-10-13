@@ -15,9 +15,8 @@
     "extend": "1.*",
     "swig": "1.4.0",
     "swig-extras": "0.*",
-    "themeleon": "1.*",
-    "themeleon-swig": "0.*",
-    "sassdoc-extras": "^1.0.0"
+    "themeleon": "2.*",
+    "sassdoc-extras": "2.0.0-rc.5"
   },
   "devDependencies": {
     "uglify-js": "^2.4.15"

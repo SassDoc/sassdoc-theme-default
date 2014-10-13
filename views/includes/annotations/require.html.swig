@@ -1,7 +1,7 @@
 {% set title_displayed = false %}
-{% for require in item.requires %}
+{% for require in item.require %}
 
-  {% if (view.display.access.indexOf(require.item.access[0]) != -1) and not (not view.display.alias and require.item.alias[0]) or require.external %}
+  {% if (view.display.access.indexOf(require.item.access) != -1) and not (not view.display.alias and require.item.alias) or require.external %}
     {% if not title_displayed %}
       {% set title_displayed = true %}
       <h3 class="item__sub-heading">Requires</h3>
@@ -11,7 +11,7 @@
     {% if require.external %}
       <li>
         {% if require.url %}
-          <a href="{{ require.url}}"><code>{{ require.name }}</code></a>  {{ require.description }}</li>
+          <a href="{{ require.url }}"><code>{{ require.name }}</code></a>  {{ require.description }}</li>
         {% else %}
           <code>{{ require.name }}</code>
         {% endif %}

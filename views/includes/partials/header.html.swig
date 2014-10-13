@@ -2,7 +2,7 @@
   <div class="container">
   {% if package.description %}
     <div class="header__description">
-      {{ package.htmlDescription | safe }}
+      {{ package.description | safe }}
     </div>
   {% endif %}
 
