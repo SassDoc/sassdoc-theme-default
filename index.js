@@ -35,7 +35,7 @@ module.exports = function (dest, ctx) {
     ctx.view = {};
   }
 
-  var defaultView = require('./view.json');
+  var defaultView = require('./.sassdocrc');
   ctx.view = extend({}, defaultView, ctx.view);
   ctx.view.groups = extend(defaultView.groups, ctx.view.groups);
 
