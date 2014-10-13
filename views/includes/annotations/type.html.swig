@@ -2,10 +2,10 @@
   <h3 class="item__sub-heading">Type</h3>
 
   <p>
-  {% if item.type[0] == "*" %}
+  {% if item.type == "*" %}
     Any
   {% else %}
-    <code>{{ item.type[0]|split('|')|trim|capitalize|join('</code>, <code>')|safe }}</code>
+    <code>{{ item.type|split('|')|trim|capitalize|join('</code>, <code>')|safe }}</code>
   {% endif %}
   </p>
 {% endif %}

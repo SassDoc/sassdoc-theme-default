@@ -1,6 +1,6 @@
 <h3 class="item__heading">
-  {% if item.access[0] != "public" %}
-    <span class="item__access">[{{ item.access[0] }}]</span>
+  {% if item.access != "public" %}
+    <span class="item__access">[{{ item.access }}]</span>
   {% endif %}
 
   <a class="item__name" href="#{{ item.context.type }}-{{ item.context.name }}">{{ item.context.name }}</a>

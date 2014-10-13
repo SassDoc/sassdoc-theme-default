@@ -1,7 +1,7 @@
 {% set title_displayed = false %}
 {% for require in item.requires %}
 
-  {% if (view.display.access.indexOf(require.item.access[0]) != -1) and not (not view.display.alias and require.item.alias[0]) or require.external %}
+  {% if (view.display.access.indexOf(require.item.access) != -1) and not (not view.display.alias and require.item.alias[0]) or require.external %}
     {% if not title_displayed %}
       {% set title_displayed = true %}
       <h3 class="item__sub-heading">Requires</h3>

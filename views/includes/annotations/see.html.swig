@@ -1,7 +1,7 @@
 {% set title_displayed = false %}
 {% for see in item.see %}
 
-  {% if (view.display.access.indexOf(see.access[0]) != -1) and not (not view.display.alias and see.alias[0]) %}
+  {% if (view.display.access.indexOf(see.access) != -1) and not (not view.display.alias and see.alias[0]) %}
     {% if not title_displayed %}
       {% set title_displayed = true %}
       <h3 class="item__sub-heading">See</h3>
