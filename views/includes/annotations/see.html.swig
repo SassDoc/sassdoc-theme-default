@@ -5,10 +5,10 @@
     {% if not title_displayed %}
       {% set title_displayed = true %}
       <h3 class="item__sub-heading">See</h3>
-      <ul class="list-unstyled  list-inline">
+      <ul class="list-unstyled">
     {% endif %}
 
-    <li><a href="#{{ see.context.type }}-{{ see.context.name }}"><code>{{ see.context.name }}</code></a></li>
+    <li><span class="item__cross-type">[{{ see.context.type }}]</span> <a href="#{{ see.context.type }}-{{ see.context.name }}"><code>{{ see.context.name }}</code></a></li>
   {% endif %}
 
 {% endfor %}

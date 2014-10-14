@@ -228,3 +228,9 @@
     padding: 0 4px;
   }
 }
+
+.item__cross-type {
+  color: lighten(color("dark-grey"), 10%);
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-size: .8em;
+}
