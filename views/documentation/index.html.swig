@@ -3,7 +3,7 @@
 {% block content %}
 
   {# No item documented #}
-  {% if data.count == 0 %}
+  {% if data.length == 0 %}
     <section class="main__section">
       <h2 class="main__heading">Seems like nothing has been documented yet!</h2>
     </section>
