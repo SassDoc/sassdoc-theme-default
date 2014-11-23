@@ -10,7 +10,7 @@
 
 <div class="sidebar__body">
   {# No item documented #}
-  {% if data.length == 0 %}
+  {% if data.displayCount == 0 %}
     <p class="sidebar__item  sidebar__item--heading">No documented item.</p>
 
   {# Some items documented #}
