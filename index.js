@@ -54,5 +54,5 @@ module.exports = function (dest, ctx) {
 
   ctx.data.byGroupAndType = sassdocExtras.byGroupAndType(ctx.data);
 
-  return theme.apply(this, arguments);
+  return theme.call(this, dest, ctx);
 };
