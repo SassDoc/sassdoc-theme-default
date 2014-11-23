@@ -7,8 +7,8 @@
     data-expanded="%{{ item.context.name }} { {{ item.context.code }} }"
     data-collapsed="%{{ item.context.name }} { ... }"><code>%{{ item.context.name }} { ... }</code></pre>
 
-  {% if view.basePath %}
-    <a href="{{ view.basePath }}/{{ item.file.path }}#L{{ item.context.line.start }}-L{{ item.context.line.end }}" class="item__source-link" target="_blank">View source</a>
+  {% if basePath %}
+    <a href="{{ basePath }}/{{ item.file.path }}#L{{ item.context.line.start }}-L{{ item.context.line.end }}" class="item__source-link" target="_blank">View source</a>
   {% endif %}
 </div>
 
@@ -18,8 +18,8 @@
 <div class="relative  clear">
   <pre class="item__code  language-scss"><code>${{ item.context.name }}: {{ item.context.value|safe }}{% if item.context.scope !== "private" %} !{{ item.context.scope }}{% endif %};</code></pre>
 
-  {% if view.basePath %}
-    <a href="{{ view.basePath }}/{{ item.file.path }}" class="item__source-link" target="_blank">View source</a>
+  {% if basePath %}
+    <a href="{{ basePath }}/{{ item.file.path }}" class="item__source-link" target="_blank">View source</a>
   {% endif %}
 </div>
 
@@ -51,8 +51,8 @@
     data-expanded="@{{ item.context.type }} {{ item.context.name }}({{ parameters_string }}) { {{ item.context.code }} }"
     data-collapsed="@{{ item.context.type }} {{ item.context.name }}({{ parameters_string }}) { ... }"><code>@{{ item.context.type }} {{ item.context.name }}({{ parameters_string }}) { ... }</code></pre>
 
-  {% if view.basePath %}
-    <a href="{{ view.basePath }}/{{ item.file.path }}#L{{ item.context.line.start }}-L{{ item.context.line.end }}" class="item__source-link" target="_blank">View source</a>
+  {% if basePath %}
+    <a href="{{ basePath }}/{{ item.file.path }}#L{{ item.context.line.start }}-L{{ item.context.line.end }}" class="item__source-link" target="_blank">View source</a>
   {% endif %}
 </div>
 

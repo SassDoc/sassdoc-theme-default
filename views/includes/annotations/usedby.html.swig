@@ -2,7 +2,7 @@
 
 {% for usedBy in item.usedBy %}
 
-  {% if (view.display.access.indexOf(usedBy.access) != -1) and not (not view.display.alias and usedBy.alias) %}
+  {% if (display.access.indexOf(usedBy.access) != -1) and not (not display.alias and usedBy.alias) %}
 
     {% if not title_displayed %}
       {% set title_displayed = true %}

@@ -1,4 +1,4 @@
-{% if project_title or view.display.watermark %}
+{% if project_title or display.watermark %}
   <footer class="footer" role="contentinfo">
     <div class="container">
       {% if project_title %}
@@ -30,7 +30,7 @@
         </div>
       {% endif %}
 
-      {% if view.display.watermark %}
+      {% if display.watermark %}
         <span class="footer__watermark">Built with <a href="https://github.com/SassDoc/sassdoc">SassDoc</a>.</span>
       {% endif %}
     </div>
