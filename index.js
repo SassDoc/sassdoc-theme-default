@@ -54,9 +54,5 @@ module.exports = function (dest, ctx) {
 
   ctx.data.byGroupAndType = sassdocExtras.byGroupAndType(ctx.data);
 
-  ctx.data.displayCount = ctx.data.reduce(function (val, item) {
-    return val + item.display;
-  }, 0)
-
   return theme.call(this, dest, ctx);
 };
