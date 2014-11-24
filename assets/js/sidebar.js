@@ -6,9 +6,6 @@
       // Collapsed class
       collapsedClass: 'is-collapsed',
 
-      // Storage key
-      storageKey: '_sassdoc_sidebar_index',
-
       // Index attribute
       indexAttribute: 'data-slug',
 
@@ -33,20 +30,8 @@
   Sidebar.prototype.initialize = function () {
     this.conf.nodes = $('[' + this.conf.indexAttribute + ']');
 
-    this.load();
-    this.updateDOM();
+    this.index = this.buildIndex();
     this.bind();
-  };
-
-  /**
-   * Load data from storage or create fresh index
-   */
-  Sidebar.prototype.load = function () {
-    var index = 'localStorage' in global ?
-      global.localStorage.getItem(this.conf.storageKey) :
-      null;
-
-    this.index = index ? JSON.parse(index) : this.buildIndex();
   };
 
   /**
@@ -66,41 +51,12 @@
   };
 
   /**
-   * Update DOM based on index
-   */
-  Sidebar.prototype.updateDOM = function () {
-    var item;
-
-    for (item in this.index) {
-      if (this.index[item] === false) {
-        $('[' + this.conf.indexAttribute + '="' + item + '"]').addClass(this.conf.collapsedClass);
-      }
-    }
-  };
-
-  /**
-   * Save index in storage
-   */
-  Sidebar.prototype.save = function () {
-    if (!('localStorage' in global)) {
-      return;
-    }
-
-    global.localStorage.setItem(this.conf.storageKey, JSON.stringify(this.index));
-  };
-
-  /**
    * Bind UI events
    */
   Sidebar.prototype.bind = function () {
     var $item, slug, fn, text;
     var $toggleBtn = $(this.conf.toggleBtn);
     var collapsed = false;
-
-    // Save index in localStorage
-    global.onbeforeunload = $.proxy(function () {
-      // this.save(); // Seems to do more harm than good
-    }, this);
 
     // Toggle all
     $toggleBtn.on('click', $.proxy(function (event) {
@@ -122,10 +78,9 @@
       }, this));
 
       collapsed = !collapsed;
-      this.save();
     }, this));
 
-    if (global.localStorage.getItem(this.conf.storageKey) === null && this.conf.initialCollapse !== false) {
+    if (this.conf.initialCollapse !== false) {
       $toggleBtn.trigger('click');
     }
 
@@ -136,7 +91,6 @@
 
       // Update index
       this.index[slug] = !this.index[slug];
-      this.save();
 
       // Update DOM
       $item.toggleClass(this.conf.collapsedClass);
