@@ -10,7 +10,7 @@
       <ul class="list-unstyled  list-inline">
     {% endif %}
 
-    <li><a href="#{{ usedBy.context.type }}-{{ usedBy.context.name }}"><code>{{ usedBy.context.name }}</code></a></li>
+    <li><span class="item__cross-type">[{{ usedBy.context.type }}]</span> <a href="#{{ usedBy.context.type }}-{{ usedBy.context.name }}"><code>{{ usedBy.context.name }}</code></a></li>
   {% endif %}
 
 {% endfor %}
