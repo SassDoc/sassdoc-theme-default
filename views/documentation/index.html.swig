@@ -26,7 +26,7 @@
 
               {# Loop over the items #}
               {% for item in items %}
-                {% include "../includes/partials/item.html.swig" with item %}
+                {% include "../includes/partials/item.html.swig" with context %}
               {% endfor %}
             </section>
           {% endif %}
