@@ -27,7 +27,7 @@
 {% else %}
 
 {% set parameters_string = '' %}
-{% for parameter in item.parameters %}
+{% for parameter in item.parameter %}
   {% set value = '$' + parameter.name %}
 
   {% if parameter.default %}
