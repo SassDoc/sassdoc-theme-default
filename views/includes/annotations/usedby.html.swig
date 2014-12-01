@@ -7,7 +7,7 @@
     {% if not title_displayed %}
       {% set title_displayed = true %}
       <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
+      <ul class="list-unstyled">
     {% endif %}
 
     <li><span class="item__cross-type">[{{ usedBy.context.type }}]</span> <a href="#{{ usedBy.context.type }}-{{ usedBy.context.name }}"><code>{{ usedBy.context.name }}</code></a></li>
