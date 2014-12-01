@@ -6,7 +6,7 @@
     {% if example.description %}
     <div class="example__description">{{ example.description|safe }}</div>
     {% endif %}
-    <pre class="example__code"><code class="language-{{ example.type }}">{{ example.code|escape|safe }}</code></pre>
+    <pre class="example__code  language-{{ example.type }}"><code>{{ example.code|escape|safe }}</code></pre>
   </div>
   {% endfor %}
 {% endif %}
