@@ -2,13 +2,7 @@
  * Item
  */
 .item {
-  & + & {
-    margin: 4em 0;
-  }
-
-  p {
-    margin: 0 0 .5em 0;
-  }
+  margin-bottom: 4em;
 }
 
 /**
@@ -16,7 +10,7 @@
  */
 .item__heading {
   color: color("dark-grey");
-  margin: 0 0 .5em 0;
+  margin: 0 0 $vertical-rhythm 0;
   position: relative;
   font-size: 2em;
   font-weight: 300;
@@ -27,7 +21,7 @@
  * Name
  */
 .item__name {
-  color: color("dark-grey");
+  color: color("pink");
 }
 
 /**
@@ -143,10 +137,10 @@
 
 .item__sub-heading {
   color: color("green");
-  margin-bottom: .5em;
-  margin-top: 1.5em;
+  margin-top: 0;
+  margin-bottom: $vertical-rhythm;
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 /**
@@ -233,4 +227,14 @@
   color: lighten(color("dark-grey"), 10%);
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   font-size: .8em;
+}
+
+.item__description {
+  margin-bottom: $vertical-rhythm;
+}
+
+.item__code-wrapper {
+  position: relative;
+  clear: both;
+  margin-bottom: $vertical-rhythm;
 }

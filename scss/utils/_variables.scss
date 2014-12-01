@@ -15,16 +15,18 @@
  * @type Map
  */
 $colors: (
-  "pink":         #c6538c,
+  "pink":         #dd5a6f,
 
   "light-purple": #e9e4f1,
   "purple":       #998099,
 
-  "green":        #699,
+  "green":        #135c6a,
+
+  "yellow":       #ffc93c,
 
   "light-grey":   #e0e0e0,
   "medium-grey":  #ddd,
-  "dark-grey":    #444,
+  "dark-grey":    #333,
 
   "white":        #f9f9f9
 ) !global;
@@ -67,3 +69,21 @@ $z-indexes: (
  * @type Number
  */
 $sidebar-width: 280px;
+
+
+/**
+ * Vertical rhythm
+ */
+$vertical-rhythm: 1.5rem;
+
+/**
+ * Text font stack
+ * @type List
+ */
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+/**
+ * Code font stack
+ * @type List
+ */
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace;

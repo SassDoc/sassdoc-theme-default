@@ -13,7 +13,7 @@ html {
  * Body rules
  */
 body {
-  font: 1em/1.35 'Roboto', 'Helvetica', sans-serif;
+  font: 1em/1.35 $text-font-stack;
   overflow: auto;
   margin: 0;
 }
@@ -31,6 +31,10 @@ a {
       color: color("dark-grey");
     }
   }
+}
+
+table p {
+  margin: 0 0 $vertical-rhythm/3;
 }
 
 /**
@@ -83,6 +87,8 @@ a {
   padding-left: 0;
   list-style: none;
   line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: $vertical-rhythm;
 }
 
 .list-inline li {
