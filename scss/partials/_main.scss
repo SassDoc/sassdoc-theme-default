@@ -31,13 +31,19 @@
 }
 
 .main__heading {
-  border-bottom: 5px solid #EFEFEF;
+  border-bottom: 5px solid color("pink");
   padding-bottom: .5em;
   margin-bottom: .5em;
+  background: color("yellow");
+  width: calc(100% + 2/3 * 2em);
+  margin-left: (-2 / 3 * 1em);
+  padding-left: (2 / 3 * 1em);
 }
 
 .main__heading--secondary {
   font-size: 2.5em;
   text-transform: capitalize;
   padding-top: 0;
+  border-bottom: 5px solid color("light-grey");
+  padding-bottom: .5em;
 }

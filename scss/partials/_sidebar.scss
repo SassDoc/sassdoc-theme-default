@@ -108,6 +108,7 @@ $level-3: $level-2 + 2em;
   font-size: 1em;
   margin: 0;
   padding: 1.45em;
+  @include ellipsis;
 }
 
 .btn-toggle {
