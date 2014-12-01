@@ -1,7 +1,7 @@
 {# Placeholders #}
 {% if item.context.type == "placeholder" %}
 
-<div class="relative  clear  code--collapsed">
+<div class="item__code-wrapper">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="%{{ item.context.name }} { {{ item.context.code }} }"
@@ -15,7 +15,7 @@
 {# Variables #}
 {% elseif item.context.type == "variable" %}
 
-<div class="relative  clear">
+<div class="item__code-wrapper">
   <pre class="item__code  language-scss"><code>${{ item.context.name }}: {{ item.context.value }}{% if item.context.scope !== "private" %} !{{ item.context.scope }}{% endif %};</code></pre>
 
   {% if basePath %}
@@ -45,7 +45,7 @@
   {% endif %}
 {% endfor %}
 
-<div class="relative  clear  code--collapsed">
+<div class="item__code-wrapper">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="@{{ item.context.type }} {{ item.context.name }}({{ parameters_string }}) { {{ item.context.code }} }"
