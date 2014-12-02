@@ -21,9 +21,7 @@
     {# Include top navbar #}
     {% include "../includes/partials/header.html.swig" with project_title %}
 
-    <div class="container">
     {% block content %}{% endblock %}
-    </div>
 
     {# Include footer #}
     {% include "../includes/partials/footer.html.swig" with project_title %}

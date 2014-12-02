@@ -41,12 +41,9 @@ table p {
  * Code
  */
 :not(pre) > code {
-  padding: 2px 4px;
-  color: color("pink");
-  background-color: white;
+  color: color("green");
   white-space: nowrap;
-  border-radius: 3px;
-  border: solid 1px #DAD3D6;
+  font-weight: normal;
 }
 
 /**
@@ -103,7 +100,7 @@ table p {
   max-width: 100%;
   width: 1170px;
   margin: 0 auto;
-  padding: 0 2em;
+  padding: 0 2rem;
 }
 
 /**

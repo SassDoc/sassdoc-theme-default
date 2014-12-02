@@ -28,7 +28,7 @@
  * Code blocks
  */
 .item__example {
-  margin-bottom: 1em;
+  margin-bottom: $vertical-rhythm;
 }
 
 .item__example,
@@ -136,7 +136,7 @@
 
 
 .item__sub-heading {
-  color: color("green");
+  color: color("dark-grey");
   margin-top: 0;
   margin-bottom: $vertical-rhythm;
   font-size: 1.2em;
@@ -155,6 +155,7 @@
     border-bottom: 2px solid color("medium-grey");
     border-top: none;
     text-align: left;
+    color: mix(color("dark-grey"), white, 70%);
   }
 
   tbody th {

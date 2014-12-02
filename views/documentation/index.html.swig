@@ -14,7 +14,11 @@
     {# Loop over the groups #}
     {% for group_name, group in data.byGroupAndType %}
       <section class="main__section">
-        <h1 class="main__heading" id="{{ group_name }}">{{ groups[group_name] }}</h1>
+        <h1 class="main__heading" id="{{ group_name }}">
+          <div class="container">
+            {{ groups[group_name] }}
+          </div>
+        </h1>
 
         {# Loop over the types #}
         {% for type, items in group %}
@@ -22,7 +26,11 @@
           {# If items to be displayed in type #}
           {% if items.length > 0 %}
             <section class="main__sub-section" id="{{ group_name }}-{{ type }}">
-              <h2 class="main__heading--secondary">{{ (type + 's') }}</h2>
+              <h2 class="main__heading--secondary">
+                <div class="container">
+                  {{ (type + 's') }}
+                </div>
+              </h2>
 
               {# Loop over the items #}
               {% for item in items %}
