@@ -1,7 +1,7 @@
 'use strict';
 
 var extend = require('extend');
-var swig = new (require('swig').Swig)();
+var swig = require('swig');
 var swigExtras = require('swig-extras');
 var themeleon = require('themeleon')();
 var sassdocExtras = require('sassdoc-extras');
@@ -14,7 +14,7 @@ swig.setFilter('push', function (arr, val) {
   return arr.push(val);
 });
 
-themeleon.use('swig', swig);
+themeleon.use('consolidate');
 
 var theme = themeleon(__dirname, function (t) {
   var assetsPromise = t.copy('assets');

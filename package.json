@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "extend": "1.*",
+    "sassdoc-extras": "2.0.0-rc.1",
     "swig": "1.4.0",
     "swig-extras": "0.*",
-    "themeleon": "2.*",
-    "sassdoc-extras": "2.0.0-rc.1"
+    "themeleon": "3.0.0-rc.3"
   },
   "devDependencies": {
     "uglify-js": "^2.4.15"
