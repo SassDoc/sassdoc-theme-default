@@ -34,6 +34,7 @@ module.exports = function (dest, ctx) {
   var def = require('./default.json');
 
   ctx.groups = extend(def.groups, ctx.groups);
+  ctx.display = extend(def.display, ctx.display);
   ctx = extend({}, def, ctx);
 
   if (!ctx.display) {
