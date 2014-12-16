@@ -11,6 +11,14 @@
     "type": "git",
     "url": "https://github.com/SassDoc/sassdoc-theme-default.git"
   },
+  "files": [
+    "assets",
+    "views",
+    "index.js",
+    "LICENSE.md",
+    "README.md",
+    "view.json"
+  ],
   "dependencies": {
     "extend": "1.*",
     "swig": "1.4.0",
