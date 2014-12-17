@@ -38,10 +38,7 @@ module.exports = function (dest, ctx) {
   var defaultView = require('./view.json');
   ctx.view = extend({}, defaultView, ctx.view);
   ctx.view.groups = extend(defaultView.groups, ctx.view.groups);
-
-  if (!ctx.view.display) {
-    ctx.view.display = {};
-  }
+  ctx.view.display = extend(defaultView.display, ctx.view.display);
 
   ctx.view.display.annotations = {
     'function': ['description', 'parameters', 'returns', 'example', 'throws', 'requires', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
