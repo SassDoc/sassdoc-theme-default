@@ -37,10 +37,6 @@ module.exports = function (dest, ctx) {
   ctx.display = extend(def.display, ctx.display);
   ctx = extend({}, def, ctx);
 
-  if (!ctx.display) {
-    ctx.display = {};
-  }
-
   ctx.display.annotations = {
     'function': ['description', 'parameter', 'return', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
     'mixin': ['description', 'parameter', 'output', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
