@@ -16,7 +16,30 @@ swig.setFilter('push', function (arr, val) {
 
 themeleon.use('consolidate');
 
-var theme = themeleon(__dirname, function (t) {
+module.exports = themeleon(__dirname, function (t) {
+  var def = require('./default.json');
+
+  t.ctx.groups = extend(def.groups, t.ctx.groups);
+  t.ctx = extend({}, def, t.ctx);
+
+  if (!t.ctx.display) {
+    t.ctx.display = {};
+  }
+
+  t.ctx.display.annotations = {
+    'function': ['description', 'parameter', 'return', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
+    'mixin': ['description', 'parameter', 'output', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
+    'placeholder': ['description', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
+    'variable': ['description', 'type', 'property', 'require', 'example', 'usedby', 'since', 'see', 'todo', 'link', 'author']
+  };
+
+  sassdocExtras.markdown(t.ctx);
+  sassdocExtras.display(t.ctx);
+  sassdocExtras.groupName(t.ctx);
+  sassdocExtras.shortcutIcon(t.ctx);
+
+  t.ctx.data.byGroupAndType = sassdocExtras.byGroupAndType(t.ctx.data);
+
   var assetsPromise = t.copy('assets');
 
   if (t.ctx.shortcutIcon && t.ctx.shortcutIcon.type === 'internal') {
@@ -29,30 +52,3 @@ var theme = themeleon(__dirname, function (t) {
 
   t.swig('views/documentation/index.html.swig', 'index.html');
 });
-
-module.exports = function (dest, ctx) {
-  var def = require('./default.json');
-
-  ctx.groups = extend(def.groups, ctx.groups);
-  ctx = extend({}, def, ctx);
-
-  if (!ctx.display) {
-    ctx.display = {};
-  }
-
-  ctx.display.annotations = {
-    'function': ['description', 'parameter', 'return', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
-    'mixin': ['description', 'parameter', 'output', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
-    'placeholder': ['description', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
-    'variable': ['description', 'type', 'property', 'require', 'example', 'usedby', 'since', 'see', 'todo', 'link', 'author']
-  };
-
-  sassdocExtras.markdown(ctx);
-  sassdocExtras.display(ctx);
-  sassdocExtras.groupName(ctx);
-  sassdocExtras.shortcutIcon(ctx);
-
-  ctx.data.byGroupAndType = sassdocExtras.byGroupAndType(ctx.data);
-
-  return theme.call(this, dest, ctx);
-};
