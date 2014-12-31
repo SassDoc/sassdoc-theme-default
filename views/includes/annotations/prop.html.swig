@@ -30,7 +30,7 @@
         </td>
         <td>
         {% if (parameter.type | split('|') | lower).indexOf('color') > -1 %}
-          <span class="item__colour-preview" style="background:{{ parameter.default }};"></span>
+          <span class="item__color-preview--table" style="background:{{ parameter.default }};"></span>
         {% else %}
           -
         {% endif %}

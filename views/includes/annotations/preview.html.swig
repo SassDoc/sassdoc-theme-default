@@ -19,7 +19,7 @@
   <pre class="item__code  language-scss"><code>${{ item.context.name }}: {{ item.context.value }}{% if item.context.scope !== "private" %} !{{ item.context.scope }}{% endif %};</code></pre>
 
   {% if (item.type|lower).indexOf('color') > -1 %}
-    <span class="item__colour-preview" style="background:{{ item.context.value }};"></span>
+    <span class="item__color-preview" style="background:{{ item.context.value }};"></span>
   {% endif %}
 
   {% if view.basePath %}
