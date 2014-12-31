@@ -1,7 +1,14 @@
 <!doctype html>
 
-{% set project_title = package.title ? package.title : (package.name | capitalize) %}
-{% set project_title = project_title | default('SassDoc') %}
+{% set project_title = "SassDoc" %}
+
+{% if package.name %}
+  {% set project_title = (package.name|capitalize) %}
+{% endif %}
+
+{% if package.title %}
+  {% set project_title = package.title %}
+{% endif %}
 
 <html lang="en">
 <head>
