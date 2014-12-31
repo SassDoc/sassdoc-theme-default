@@ -19,5 +19,5 @@
 </h3>
 
 {% if item.since.length == 1 %}
-  <span class="item__since">Since {{ item.since[0].version }} - {{ item.since[0].description }}</span>
+  <span class="item__since">Since {{ item.since[0].version }}{% if item.since[0].description %} &mdash; {{ item.since[0].description }}{% endif %}</span>
 {% endif %}
