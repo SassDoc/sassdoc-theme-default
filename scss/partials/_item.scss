@@ -212,6 +212,16 @@
 }
 
 /**
+ * Adds a preview of the variable if it is a color
+ */
+.item__color-preview {
+  @include size(2em);
+  @include absolute(top .75em right .75em);
+  @include card(1);
+  border-radius: 8px;
+}
+
+/**
  * Require's description
  */
 .item__requires-description {
