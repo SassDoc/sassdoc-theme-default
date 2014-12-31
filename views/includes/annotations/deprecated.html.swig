@@ -1,3 +1,3 @@
 {% if item.deprecated %}
-  <p class="item__deprecated"><strong>Deprecated!</strong> {{ item.deprecated|default("")|safe }}</p>
+  <div class="item__deprecated"><strong>Deprecated!</strong> {{ item.deprecated|default("")|safe }}</div>
 {% endif %}
