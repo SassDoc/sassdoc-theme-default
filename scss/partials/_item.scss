@@ -49,7 +49,7 @@
 
 .item__code--togglable {
   &::after {
-    @include absolute(top -3em right 0);
+    @include absolute(bottom -2.5em right 0);
     @include opacity(0);
     color: darken(color("medium-grey"), 10%);
     font-size: .8em;
