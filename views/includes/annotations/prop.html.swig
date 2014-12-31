@@ -9,6 +9,7 @@
       <th scope="col"><span class="visually-hidden">{{ item.type }} key </span>Description</th>
       <th scope="col"><span class="visually-hidden">{{ item.type }} key </span>Type</th>
       <th scope="col"><span class="visually-hidden">{{ item.type }} key </span>Value</th>
+      <th scope="col"><span class="visually-hidden">{{ item.type }} parameter </span>Preview</th>
     </tr>
   </thead>
 
@@ -25,6 +26,13 @@
           &mdash;<span class="visually-hidden"> none</span>
         {% else %}
           <code>{{ prop.default }}</code>
+        {% endif %}
+        </td>
+        <td>
+        {% if (parameter.type | split('|') | lower).indexOf('color') > -1 %}
+          <span class="item__colour-preview" style="background:{{ parameter.default }};"></span>
+        {% else %}
+          -
         {% endif %}
         </td>
       </tr>

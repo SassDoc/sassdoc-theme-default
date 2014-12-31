@@ -226,6 +226,16 @@
 }
 
 /**
+ * Same as above, but slightly smaller for table display
+ */
+.item__color-preview--table {
+  @include size(1.5em);
+  @include card(1);
+  border-radius: 4px;
+  display: block;
+}
+
+/**
  * Require's description
  */
 .item__requires-description {
