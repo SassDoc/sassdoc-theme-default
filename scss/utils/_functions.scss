@@ -57,8 +57,6 @@
  * Tries to fetch the z-index mapped to `$layer` in `$z-indexes` map.
  * If found, returns it, else returns `null`.
  *
- * @requires {variable} z-indexes
- *
  * @example scss
  * z-index: z("default")
  *
@@ -80,7 +78,6 @@
 /**
  * Color getter.
  *
- * @requires {variable} colors
  * @requires SassCore::map-has-key <http://sass-lang.com/documentation/Sass/Script/Functions.html#map_has_key-instance_method>
  *
  * @example scss
