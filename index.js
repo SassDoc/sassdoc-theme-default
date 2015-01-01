@@ -21,7 +21,7 @@ swig.setFilter('push', function (arr, val) {
  * @see {@link http://stackoverflow.com/questions/11867545/change-text-color-based-on-brightness-of-the-covered-background-area|this thread} for further information.
  */
 swig.setFilter('yiq', function (color) {
-  var hex = chroma(color).hex();
+  var hex = chroma(color).hex().substr(1);
 
   function getChannel(start) {
     return parseInt(hex.substr(start, 2), 16);
