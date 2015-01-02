@@ -2,11 +2,11 @@
  * Univeral box-sizing reset
  */
 html {
-  box-sizing: border-box;
+  @include prefixer(box-sizing, border-box, webkit moz);
 }
 
 *, *::after, *::before {
-  box-sizing: inherit;
+  @include prefixer(box-sizing, inherit, webkit moz);
 }
 
 /**
@@ -33,6 +33,9 @@ a {
   }
 }
 
+/**
+ * Vertical rhythm
+ */
 table p {
   margin: 0 0 $vertical-rhythm/3;
 }
@@ -75,51 +78,4 @@ table p {
       display: inline;
     }
   }
-}
-
-/**
- * Lists
- */
-.list-unstyled {
-  padding-left: 0;
-  list-style: none;
-  line-height: 1.5;
-  margin-top: 0;
-  margin-bottom: $vertical-rhythm;
-}
-
-.list-inline li {
-  @include inline-block;
-}
-
-/**
- * Main container
- */
-.container {
-  @include clearfix;
-  max-width: 100%;
-  width: 1170px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/**
- * Visually-hidden
- */
-.visually-hidden {
-  @include visually-hidden;
-}
-
-/**
- * Relative
- */
-.relative {
-  position: relative;
-}
-
-/**
- * Clear
- */
-.clear {
-  clear: both;
 }

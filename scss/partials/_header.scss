@@ -32,23 +32,26 @@
 
 /**
  * Item count
+ * 1. Leave some space to search field
  */
 .header__description {
   padding-bottom: 1em;
 
   @include respond-to("medium") {
     float: left;
-    width: calc(100% - 16em);
+    width: calc(100% - 16em); /* 1 */
     padding-top: .3em;
     padding-bottom: 0;
   }
-
 
   a {
     color: white;
     text-decoration: underline;
   }
 
+  /**
+   * Prevent Markdown-generated paragraphs from messing with layout
+   */
   * {
     margin: 0;
   }

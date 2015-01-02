@@ -1,58 +1,42 @@
-/**
- * Map of colors for quick grabbing.
- *
- * @prop {Color} pink (#c6538c) - pink
- * @prop {Color} light-purple (#e9e4f1) - light purple
- * @prop {Color} purple (#998099) - purple
- * @prop {Color} green (#699) - green
- * @prop {Color} light-grey (#e0e0e0) - light grey
- * @prop {Color} medium-grey (#ddd) - medium grey
- * @prop {Color} dark-grey (#444) - dark grey
- * @prop {Color} white (#f9f9f9) - white
- *
- * @see {function} color
- *
- * @type Map
- */
+/// Map of colors for quick grabbing.
+/// @prop {Color} pink (#c6538c) - pink
+/// @prop {Color} light-purple (#e9e4f1) - light purple
+/// @prop {Color} purple (#998099) - purple
+/// @prop {Color} green (#699) - green
+/// @prop {Color} light-grey (#e0e0e0) - light grey
+/// @prop {Color} medium-grey (#ddd) - medium grey
+/// @prop {Color} dark-grey (#444) - dark grey
+/// @prop {Color} white (#f9f9f9) - white
+/// @see {function} color
+/// @type Map
 $colors: (
   "pink":         #dd5a6f,
-
   "light-purple": #e9e4f1,
   "purple":       #998099,
-
   "green":        #135c6a,
-
   "yellow":       #ffc93c,
-
   "light-grey":   #e0e0e0,
   "medium-grey":  #ddd,
   "dark-grey":    #333,
-
   "white":        #f9f9f9
 ) !global;
 
-/**
- * Map of breakpoints for responsive design.
- *
- * @see {mixin} respond-to
- *
- * @type Map
- */
+
+/// Map of breakpoints for responsive design.
+/// @prop {Map} small (max-width: 800px) - small screens
+/// @prop {Map} medium (min-width: 801px) - regular screens
+/// @see {mixin} respond-to
+/// @type Map
 $breakpoints: (
   "small":  (max-width: 800px),
   "medium": (min-width: 801px)
 ) !global;
 
 
-/**
- * Z-indexes layers.
- *
- * @prop {Number} key - aliases for specific z-indexes
- *
- * @see {function} z
- *
- * @type Map
- */
+/// Z-indexes layers.
+/// @prop {Number} key   - aliases for specific z-indexes
+/// @see {function} z
+/// @type Map
 $z-indexes: (
   "goku":       9001,
   "modal":      5000,
@@ -63,27 +47,21 @@ $z-indexes: (
 ) !global;
 
 
-/**
- * Sidebar width
- *
- * @type Number
- */
+/// Sidebar width
+/// @type Number
 $sidebar-width: 280px;
 
 
-/**
- * Vertical rhythm
- */
+/// Vertical rhythm
+/// @type Number
 $vertical-rhythm: 1.5rem;
 
-/**
- * Text font stack
- * @type List
- */
+
+/// Text font stack
+/// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
-/**
- * Code font stack
- * @type List
- */
+
+/// Code font stack
+/// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace;

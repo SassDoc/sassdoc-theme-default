@@ -26,6 +26,9 @@
   }
 }
 
+/**
+ * Primary headings
+ */
 .main__heading {
   color: color("dark-grey");
   font-size: 4em;
@@ -39,6 +42,9 @@
   background: color("yellow");
 }
 
+/**
+ * Secondary headings
+ */
 .main__heading--secondary {
   font-size: 3em;
   color: color("pink");
