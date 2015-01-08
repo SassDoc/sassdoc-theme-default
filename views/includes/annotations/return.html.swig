@@ -5,7 +5,7 @@
   {% if item.return.type == '*' %}
     Any
   {% else %}
-    <code>{{ item.return.type|split('|')|trim|capitalize|join('</code>, <code>')|safe }}</code>
+    <code>{{ item.return.type | display_as_type }}</code>
   {% endif %}
   </p>
 {% endif %}

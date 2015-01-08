@@ -5,14 +5,23 @@ var swig = new (require('swig').Swig)();
 var swigExtras = require('swig-extras');
 var themeleon = require('themeleon')();
 var sassdocExtras = require('sassdoc-extras');
+var swigFilters = require('swig/lib/filters');
 
 swigExtras.useFilter(swig, 'split');
 swigExtras.useFilter(swig, 'trim');
 swigExtras.useFilter(swig, 'groupby');
 
-swig.setFilter('push', function (arr, val) {
-  return arr.push(val);
-});
+function safe(fn) {
+  fn.safe = true;
+  return fn;
+}
+
+swig.setFilter('display_as_type', safe(function (input) {
+  return input.split('|')
+    .map(function (_) { return _.trim(); })
+    .map(swigFilters.capitalize)
+    .join('</code> or <code>')
+}));
 
 themeleon.use('swig', swig);
 
