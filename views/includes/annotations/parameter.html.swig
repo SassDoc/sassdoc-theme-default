@@ -17,11 +17,13 @@
           <th scope="row" data-label="name"><code>${{ parameter.name }}</code></th>
           <td data-label="desc">{{ parameter.description|default('&mdash;<span class="visually-hidden"> none</span>')|safe }}</td>
           <td data-label="type">
-          {% if parameter.type == '*' %}
-            Any
-          {% else %}
-            {{ parameter.type|split('|')|trim|capitalize|join(', ')}}
-          {% endif %}
+            <code>
+              {% if parameter.type == '*' %}
+                Any
+              {% else %}
+                {{ parameter.type | display_as_type }}
+              {% endif %}
+            </code>
           </td>
           <td data-label="default">
           {% if not parameter.default %}

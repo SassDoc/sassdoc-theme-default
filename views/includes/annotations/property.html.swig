@@ -18,7 +18,7 @@
         <th scope="row" data-label="name"><code>{{ prop.name }}</code></th>
         <td data-label="desc">{{ prop.description | default('&mdash;<span class="visually-hidden"> none</span>') | safe }}</td>
         <td data-label="type">
-        {{ prop.type|split('|')|trim|capitalize|join(', ') }}
+          <code>{{ prop.type | display_as_type }}</code>
         </td>
         <td data-label="default">
         {% if not prop.default %}
