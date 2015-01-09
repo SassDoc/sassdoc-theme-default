@@ -13,7 +13,7 @@ html {
  * Body rules
  */
 body {
-  font: 1em/1.35 'Roboto', 'Helvetica', sans-serif;
+  font: 1em/1.35 $text-font-stack;
   overflow: auto;
   margin: 0;
 }
@@ -33,16 +33,17 @@ a {
   }
 }
 
+table p {
+  margin: 0 0 $vertical-rhythm/3;
+}
+
 /**
  * Code
  */
 :not(pre) > code {
-  padding: 2px 4px;
-  color: color("pink");
-  background-color: white;
+  color: color("green");
   white-space: nowrap;
-  border-radius: 3px;
-  border: solid 1px #DAD3D6;
+  font-weight: normal;
 }
 
 /**
@@ -83,6 +84,8 @@ a {
   padding-left: 0;
   list-style: none;
   line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: $vertical-rhythm;
 }
 
 .list-inline li {
@@ -97,7 +100,7 @@ a {
   max-width: 100%;
   width: 1170px;
   margin: 0 auto;
-  padding: 0 2em;
+  padding: 0 2rem;
 }
 
 /**

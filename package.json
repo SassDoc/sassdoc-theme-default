@@ -3,7 +3,7 @@
   "description": "SassDoc's default theme",
   "title": "SassDoc Default Theme",
   "author": "SassDoc team",
-  "version": "1.7.4",
+  "version": "2.0.0-rc.10",
   "keywords": [
     "sassdoc-theme"
   ],
@@ -14,18 +14,18 @@
   "files": [
     "assets",
     "views",
+    "default.json",
     "index.js",
     "LICENSE.md",
-    "README.md",
-    "view.json"
+    "README.md"
   ],
   "dependencies": {
     "chroma-js": "^0.6.3",
     "extend": "1.*",
-    "sassdoc-extras": "^1.0.0",
+    "sassdoc-extras": "2.0.0-rc.4",
     "swig": "1.4.0",
     "swig-extras": "0.*",
-    "themeleon": "1.*",
+    "themeleon": "2.*",
     "themeleon-swig": "0.*"
   },
   "devDependencies": {

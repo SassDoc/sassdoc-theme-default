@@ -63,3 +63,33 @@
 %visually-hidden {
   @include visually-hidden($extend: false);
 }
+
+
+/**
+ * Accessibility ellipsis helper.
+ *
+ * @group helpers
+ *
+ * @param {Bool} $extend (true) - Whether or not extend a placeholder.
+ */
+
+@mixin ellipsis($extend: true) {
+  @if $extend {
+    @extend %ellipsis;
+  }
+
+  @else {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+/**
+ * Accessibility ellipsis helper.
+ *
+ * @requires {mixin} ellipsis
+ */
+%ellipsis {
+  @include ellipsis($extend: false);
+}

@@ -61,11 +61,11 @@ module.exports = function (dest, ctx) {
   ctx.view.groups = extend(defaultView.groups, ctx.view.groups);
   ctx.view.display = extend(defaultView.display, ctx.view.display);
 
-  ctx.view.display.annotations = {
-    'function': ['description', 'parameters', 'returns', 'example', 'throws', 'requires', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
-    'mixin': ['description', 'parameters', 'output', 'example', 'throws', 'requires', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
-    'placeholder': ['description', 'example', 'throws', 'requires', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
-    'variable': ['description', 'type', 'prop', 'requires', 'example', 'usedby', 'since', 'see', 'todo', 'link', 'author']
+  ctx.display.annotations = {
+    'function': ['description', 'parameter', 'return', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
+    'mixin': ['description', 'parameter', 'output', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
+    'placeholder': ['description', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
+    'variable': ['description', 'type', 'property', 'require', 'example', 'usedby', 'since', 'see', 'todo', 'link', 'author']
   };
 
   sassdocExtras.markdown(ctx);
@@ -75,5 +75,5 @@ module.exports = function (dest, ctx) {
 
   ctx.data.byGroupAndType = sassdocExtras.byGroupAndType(ctx.data);
 
-  return theme.apply(this, arguments);
+  return theme.call(this, dest, ctx);
 };

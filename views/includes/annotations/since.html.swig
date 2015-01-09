@@ -3,7 +3,7 @@
 
   <ul class="list-unstyled">
     {% for since in item.since %}
-      <li>{{ since.version | safe }} - {{ since.description }}</li>
+      <li>{{ since.version }}{% if since.description %} &mdash; {{ since.description|safe }}{% endif %}</li>
     {% endfor %}
   </ul>
 {% endif %}

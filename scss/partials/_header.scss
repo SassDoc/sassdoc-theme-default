@@ -7,6 +7,7 @@
   padding: 1em 0;
   background: color("pink");
   color: color("light-grey");
+  position: relative;
 }
 
 /**
@@ -33,10 +34,16 @@
  * Item count
  */
 .header__description {
-  float: left;
-  padding-top: .3em;
-  width: calc(100% - 16em);
-  
+  padding-bottom: 1em;
+
+  @include respond-to("medium") {
+    float: left;
+    width: calc(100% - 16em);
+    padding-top: .3em;
+    padding-bottom: 0;
+  }
+
+
   a {
     color: white;
     text-decoration: underline;

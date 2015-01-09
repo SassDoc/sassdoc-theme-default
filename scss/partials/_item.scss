@@ -2,13 +2,7 @@
  * Item
  */
 .item {
-  & + & {
-    margin: 4em 0;
-  }
-
-  p {
-    margin: 0 0 .5em 0;
-  }
+  margin-bottom: 4em;
 }
 
 /**
@@ -16,7 +10,7 @@
  */
 .item__heading {
   color: color("dark-grey");
-  margin: 0 0 .5em 0;
+  margin: 0 0 $vertical-rhythm 0;
   position: relative;
   font-size: 2em;
   font-weight: 300;
@@ -27,14 +21,14 @@
  * Name
  */
 .item__name {
-  color: color("dark-grey");
+  color: color("pink");
 }
 
 /**
  * Code blocks
  */
 .item__example {
-  margin-bottom: 1em;
+  margin-bottom: $vertical-rhythm;
 }
 
 .item__example,
@@ -55,7 +49,7 @@
 
 .item__code--togglable {
   &::after {
-    @include absolute(top -3em right 0);
+    @include absolute(bottom -2.5em right 0);
     @include opacity(0);
     color: darken(color("medium-grey"), 10%);
     font-size: .8em;
@@ -142,11 +136,10 @@
 
 
 .item__sub-heading {
-  color: color("green");
-  margin-bottom: .5em;
-  margin-top: 1.5em;
-  text-transform: uppercase;
-  font-size: 1em;
+  color: color("dark-grey");
+  margin-top: 0;
+  margin-bottom: $vertical-rhythm;
+  font-size: 1.2em;
 }
 
 /**
@@ -162,6 +155,7 @@
     border-bottom: 2px solid color("medium-grey");
     border-top: none;
     text-align: left;
+    color: mix(color("dark-grey"), white, 70%);
   }
 
   tbody th {
@@ -237,4 +231,20 @@
     margin: 0;
     padding: 0 4px;
   }
+}
+
+.item__cross-type {
+  color: lighten(color("dark-grey"), 10%);
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-size: .8em;
+}
+
+.item__description {
+  margin-bottom: $vertical-rhythm;
+}
+
+.item__code-wrapper {
+  position: relative;
+  clear: both;
+  margin-bottom: $vertical-rhythm;
 }

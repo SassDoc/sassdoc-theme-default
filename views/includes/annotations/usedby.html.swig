@@ -2,15 +2,15 @@
 
 {% for usedBy in item.usedBy %}
 
-  {% if (view.display.access.indexOf(usedBy.access[0]) != -1) and not (not view.display.alias and usedBy.alias[0]) %}
+  {% if (display.access.indexOf(usedBy.access) != -1) and not (not display.alias and usedBy.alias) %}
 
     {% if not title_displayed %}
       {% set title_displayed = true %}
       <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
+      <ul class="list-unstyled">
     {% endif %}
 
-    <li><a href="#{{ usedBy.context.type }}-{{ usedBy.context.name }}"><code>{{ usedBy.context.name }}</code></a></li>
+    <li><span class="item__cross-type">[{{ usedBy.context.type }}]</span> <a href="#{{ usedBy.context.type }}-{{ usedBy.context.name }}"><code>{{ usedBy.context.name }}</code></a></li>
   {% endif %}
 
 {% endfor %}

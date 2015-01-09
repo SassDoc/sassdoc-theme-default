@@ -1,0 +1,29 @@
+/**
+ * Sidebar toggle
+ */
+.layout-toggle {
+  display: none;
+
+  @include respond-to("medium") {
+    @include absolute(top 10px left 10px);
+    font-size: 2em;
+    cursor: pointer;
+    color: color("green");
+    display: block;
+  }
+}
+
+@include respond-to("medium") {
+  .sidebar-closed {
+    .sidebar {
+      @include prefixer(transform, translateX(-$sidebar-width), webkit ms);
+    }
+
+    .main {
+      padding-left: 0;
+    }
+
+    .layout-toggle {
+    }
+  }
+}

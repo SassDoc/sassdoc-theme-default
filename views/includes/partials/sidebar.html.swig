@@ -10,7 +10,7 @@
 
 <div class="sidebar__body">
   {# No item documented #}
-  {% if data.count == 0 %}
+  {% if data.length == 0 %}
     <p class="sidebar__item  sidebar__item--heading">No documented item.</p>
 
   {# Some items documented #}
@@ -22,18 +22,15 @@
       <p class="sidebar__item  sidebar__item--heading" data-slug="{{ group_name }}"><a href="#{{ group_name }}">{{ groups[group_name] }}</a></p>
 
       {# Loop over the types #}
-      {% for type, items_from_type in group %}
+      {% for type, items in group %}
         {% if loop.first %}<div>{% endif %}
 
-        {# Filter items that should not be displayed #}
-        {% set items_to_display = (items_from_type | groupby('display'))['true'] %}
-
         {# If items to be displayed in type #}
-        {% if items_to_display.length > 0 %}
+        {% if items.length > 0 %}
           <p class="sidebar__item  sidebar__item--sub-heading" data-slug="{{ group_name + '-' + type }}"><a href="#{{ group_name }}-{{ type }}">{{ (type + 's') }}</a></p>
 
           {# Loop over the items #}
-          {% for item in items_to_display %}
+          {% for item in items %}
             {% if loop.first %}<ul class="list-unstyled">{% endif %}
             <li class="sidebar__item  sassdoc__item" data-name="{{ item.context.name }}" data-type="{{ item.context.type }}">
               <a href="#{{ item.context.type }}-{{ item.context.name }}">{{ item.context.name }}
