@@ -6,14 +6,23 @@ var swigExtras = require('swig-extras');
 var themeleon = require('themeleon')();
 var sassdocExtras = require('sassdoc-extras');
 var chroma = require('chroma-js');
+var swigFilters = require('swig/lib/filters');
 
 swigExtras.useFilter(swig, 'split');
 swigExtras.useFilter(swig, 'trim');
 swigExtras.useFilter(swig, 'groupby');
 
-swig.setFilter('push', function (arr, val) {
-  return arr.push(val);
-});
+function safe(fn) {
+  fn.safe = true;
+  return fn;
+}
+
+swig.setFilter('display_as_type', safe(function (input) {
+  return input.split('|')
+    .map(function (_) { return _.trim(); })
+    .map(swigFilters.capitalize)
+    .join('</code> or <code>')
+}));
 
 /**
  * Normalises a CSS color, then uses the YIQ algorithm to get the correct contrast.
@@ -63,7 +72,7 @@ module.exports = function (dest, ctx) {
 
   ctx.display.annotations = {
     'function': ['description', 'parameter', 'return', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
-    'mixin': ['description', 'parameter', 'output', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
+    'mixin': ['description', 'parameter', 'content', 'output', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
     'placeholder': ['description', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
     'variable': ['description', 'type', 'property', 'require', 'example', 'usedby', 'since', 'see', 'todo', 'link', 'author']
   };

@@ -3,9 +3,9 @@
  */
 .sidebar {
   @include respond-to("medium") {
+    @include fixed(top 0 bottom 0 left 0);
     overflow: auto;
     box-shadow: 1px 0 1.5px rgba(black, .12);
-    @include fixed(top 0 bottom 0 left 0);
     width: $sidebar-width;
     z-index: z("default") + 1;
     border-right: 1px solid color("light-grey");
@@ -24,7 +24,7 @@ $level-2: $level-1 + 1em;
 $level-3: $level-2 + 2em;
 
 /**
- * Sidebar content
+ * Sidebar items
  */
 .sidebar__item {
   font-size: .9em;
@@ -36,7 +36,7 @@ $level-3: $level-2 + 2em;
     color: color("dark-grey");
   }
 
-  &:hover {
+  @include on-event {
     background: color("light-grey");
   }
 
@@ -56,6 +56,9 @@ $level-3: $level-2 + 2em;
   }
 }
 
+/**
+ * List item sub-heading
+ */
 .sidebar__item--sub-heading {
   padding: .5em $level-2;
 
@@ -64,13 +67,16 @@ $level-3: $level-2 + 2em;
   }
 }
 
+/**
+ * List item headings and sub-headings
+ */
 .sidebar__item--heading,
 .sidebar__item--sub-heading {
   position: relative;
 
   &:after {
-    content: '\25BC';
     @include absolute(right 2em top 50%);
+    content: '\25BC';
     margin-top: -.5em;
     color: color("medium-grey");
     font-size: .7em;
@@ -105,12 +111,15 @@ $level-3: $level-2 + 2em;
  * Sidebar main title
  */
 .sidebar__title {
+  @include ellipsis;
   font-size: 1em;
   margin: 0;
   padding: 1.45em;
-  @include ellipsis;
 }
 
+/**
+ * Sidebar toggle button
+ */
 .btn-toggle {
   background: #EFEFEF;
   border: none;
@@ -124,7 +133,7 @@ $level-3: $level-2 + 2em;
   margin: 0;
   transition: .15s ease-out;
 
-  &:hover {
+  @include on-event {
     background: #DFDFDF;
   }
 }

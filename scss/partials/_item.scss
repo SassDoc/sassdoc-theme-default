@@ -33,9 +33,9 @@
 
 .item__example,
 .item__code {
+  @include card(1);
   word-wrap: break-word;
   line-height: 1.42;
-  @include card(1);
 }
 
 /**
@@ -47,6 +47,9 @@
   cursor: pointer;
 }
 
+/**
+ * Display a hint to expand/collapse code
+ */
 .item__code--togglable {
   &::after {
     @include absolute(bottom -2.5em right 0);
@@ -56,9 +59,10 @@
     transition: .2s ease-out;
   }
 
-  &:hover::after,
-  &:focus::after {
-    @include opacity(1);
+  @include on-event {
+    &::after {
+      @include opacity(1);
+    }
   }
 
   &[data-current-state="expanded"]::after {
@@ -69,7 +73,6 @@
     content: "Click to expand.";
   }
 }
-
 
 /**
  * Example description
@@ -89,7 +92,6 @@
 .example__code[class*="language-"] {
   margin: 0;
 }
-
 
 /**
  * Anchor
@@ -224,8 +226,9 @@
  */
 .item__requires-description {
   &, * {
-    display: inline-block;
+    @include inline-block;
   }
+
   p {
     vertical-align: sub;
     margin: 0;
