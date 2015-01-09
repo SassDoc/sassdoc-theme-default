@@ -61,14 +61,11 @@ var theme = themeleon(__dirname, function (t) {
 });
 
 module.exports = function (dest, ctx) {
-  if (!('view' in ctx)) {
-    ctx.view = {};
-  }
+  var def = require('./default.json');
 
-  var defaultView = require('./view.json');
-  ctx.view = extend({}, defaultView, ctx.view);
-  ctx.view.groups = extend(defaultView.groups, ctx.view.groups);
-  ctx.view.display = extend(defaultView.display, ctx.view.display);
+  ctx.groups = extend(def.groups, ctx.groups);
+  ctx.display = extend(def.display, ctx.display);
+  ctx = extend({}, def, ctx);
 
   ctx.display.annotations = {
     'function': ['description', 'parameter', 'return', 'example', 'throw', 'require', 'usedby', 'since', 'see', 'todo', 'link', 'author'],
