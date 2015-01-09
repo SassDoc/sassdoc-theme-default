@@ -1,12 +1,12 @@
 /// Map of colors for quick grabbing.
-/// @prop {Color} pink (#c6538c) - pink
-/// @prop {Color} light-purple (#e9e4f1) - light purple
-/// @prop {Color} purple (#998099) - purple
-/// @prop {Color} green (#699) - green
-/// @prop {Color} light-grey (#e0e0e0) - light grey
-/// @prop {Color} medium-grey (#ddd) - medium grey
-/// @prop {Color} dark-grey (#444) - dark grey
-/// @prop {Color} white (#f9f9f9) - white
+/// @prop {Color} pink [#c6538c] - pink
+/// @prop {Color} light-purple [#e9e4f1] - light purple
+/// @prop {Color} purple [#998099] - purple
+/// @prop {Color} green [#699] - green
+/// @prop {Color} light-grey [#e0e0e0] - light grey
+/// @prop {Color} medium-grey [#ddd] - medium grey
+/// @prop {Color} dark-grey [#444] - dark grey
+/// @prop {Color} white [#f9f9f9] - white
 /// @see {function} color
 /// @type Map
 $colors: (
@@ -23,8 +23,8 @@ $colors: (
 
 
 /// Map of breakpoints for responsive design.
-/// @prop {Map} small (max-width: 800px) - small screens
-/// @prop {Map} medium (min-width: 801px) - regular screens
+/// @prop {Map} small [(max-width: 800px)] - small screens
+/// @prop {Map} medium [(min-width: 801px)] - regular screens
 /// @see {mixin} respond-to
 /// @type Map
 $breakpoints: (
