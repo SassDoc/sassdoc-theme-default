@@ -32,7 +32,13 @@ themeleon.use('consolidate');
  * @see {@link http://stackoverflow.com/questions/11867545/change-text-color-based-on-brightness-of-the-covered-background-area|this thread} for further information.
  */
 swig.setFilter('yiq', function (color) {
-  var hex = chroma(color).hex().substr(1);
+  var hex;
+
+  try  {
+    hex = chroma(color).hex().substr(1);
+  } catch(e) {
+    return '#000';
+  }
 
   function getChannel(start) {
     return parseInt(hex.substr(start, 2), 16);
