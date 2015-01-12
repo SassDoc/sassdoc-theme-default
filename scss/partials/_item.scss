@@ -241,3 +241,16 @@
   clear: both;
   margin-bottom: $vertical-rhythm;
 }
+
+.color-preview--inline {
+  padding: 2px 4px;
+  border: 1px solid rgba(black, .1);
+  border-radius: 3px;
+}
+
+.color-preview--block {
+  @include size(2em);
+  @include absolute(top .75em right .75em);
+  border: 1px solid rgba(black, .1);
+  border-radius: 3px;
+}

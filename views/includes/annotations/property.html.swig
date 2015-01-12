@@ -24,7 +24,11 @@
         {% if not prop.default %}
           &mdash;<span class="visually-hidden"> none</span>
         {% else %}
-          <code>{{ prop.default }}</code>
+          {% if (prop.type|lower).indexOf('color') > -1 %}
+            <code class="color-preview--inline" {% if parameter.default|lower != 'currentcolor' %}style="background: {{ prop.default }}; color: {{ prop.default | yiq }};"{% endif %ø>{{ prop.default }}</code>
+          {% else %}
+            <code>{{ prop.default }}</code>
+          {% endif %}
         {% endif %}
         </td>
       </tr>

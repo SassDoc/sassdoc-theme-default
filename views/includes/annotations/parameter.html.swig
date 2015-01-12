@@ -29,7 +29,11 @@
           {% if not parameter.default %}
             &mdash;<span class="visually-hidden"> none</span>
           {% else %}
-            <code>{{ parameter.default }}</code>
+            {% if (parameter.type|lower).indexOf('color') > -1 %}
+              <code class="color-preview--inline" {% if parameter.default|lower != 'currentcolor' %}style="background:{{ parameter.default }}; color: {{ parameter.default | yiq }}"{% endif %}>{{ parameter.default }}</code>
+            {% else %}
+              <code>{{ parameter.default }}</code>
+            {% endif %}
           {% endif %}
           </td>
         </tr>
