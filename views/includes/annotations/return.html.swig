@@ -1,7 +1,7 @@
 {% if item.return %}
   <h3 class="item__sub-heading">Returns</h3>
 
-  <div class="item__description">
+  <div class="item__description  item__description--inline">
   {% if item.return.type == '*' %}
     Any type
   {% else %}

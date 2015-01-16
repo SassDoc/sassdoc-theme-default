@@ -9,21 +9,21 @@
     {% endif %}
 
     {% if require.external %}
-      <li><span class="item__cross-type">[external]</span>
+      <li class="item__description  item__description--inline"><span class="item__cross-type">[external]</span>
         {% if require.url %}
           <a href="{{ require.url }}"><code>{{ require.name }}</code></a>  {{ require.description }}</li>
         {% else %}
           <code>{{ require.name }}</code>
         {% endif %}
         {% if require.description %}
-          <div class="item__requires-description">{{ require.description }}</div>
+          &mdash; {{ require.description }}
         {% endif %}
       </li>
     {% else %}
-      <li><span class="item__cross-type">[{{ require.item.context.type }}]</span>
+      <li class="item__description  item__description--inline"><span class="item__cross-type">[{{ require.item.context.type }}]</span>
         <a href="#{{ require.item.context.type }}-{{ require.item.context.name }}"><code>{{ require.item.context.name }}</code></a>
         {% if require.description %}
-          <div class="item__requires-description">{{ require.description }}</div>
+          &mdash; {{ require.description }}
         {% endif %}
       </li>
     {% endif %}

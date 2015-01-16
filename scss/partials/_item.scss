@@ -211,21 +211,6 @@
   color: darken(color("medium-grey"), 10%);
 }
 
-/**
- * Require's description
- */
-.item__requires-description {
-  &, * {
-    @include inline-block;
-  }
-
-  p {
-    vertical-align: sub;
-    margin: 0;
-    padding: 0 4px;
-  }
-}
-
 .item__cross-type {
   color: lighten(color("dark-grey"), 10%);
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
@@ -234,6 +219,15 @@
 
 .item__description {
   margin-bottom: $vertical-rhythm;
+}
+
+li.item__description {
+  margin-bottom: 0;
+}
+
+.item__description--inline > * {
+  @include inline-block;
+  margin: 0;
 }
 
 .item__code-wrapper {
