@@ -1,7 +1,11 @@
 'use strict';
 
 var extend = require('extend');
-var swig = require('swig');
+var fs = require('fs');
+var minify = require('html-minifier').minify;
+var path = require('path');
+var Promise = require('bluebird');
+var swig = new (require('swig').Swig);
 var swigExtras = require('swig-extras');
 var themeleon = require('themeleon')();
 var sassdocExtras = require('sassdoc-extras');
@@ -23,8 +27,6 @@ swig.setFilter('display_as_type', safe(function (input) {
     .map(swigFilters.capitalize)
     .join('</code> or <code>')
 }));
-
-themeleon.use('consolidate');
 
 /**
  * Normalises a CSS color, then uses the YIQ algorithm to get the correct contrast.
@@ -63,7 +65,21 @@ var theme = themeleon(__dirname, function (t) {
     t.ctx.shortcutIcon.url = 'assets/img/' + t.ctx.shortcutIcon.url;
   }
 
-  t.swig('views/documentation/index.html.swig', 'index.html');
+  var renderFile = Promise.promisify(swig.renderFile);
+  var writeFile = Promise.promisify(fs.writeFile);
+
+  t.push(function () {
+    return renderFile(
+      path.resolve(__dirname, 'views/documentation/index.html.swig'),
+      t.ctx
+    )
+      .then(function (html) {
+        return minify(html, { collapseWhitespace: true });
+      })
+      .then(function (html) {
+        return writeFile(path.resolve(t.dest, 'index.html'), html);
+      });
+  });
 });
 
 module.exports = function (dest, ctx) {
