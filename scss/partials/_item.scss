@@ -113,9 +113,23 @@
 /**
  * Deprecated flag
  */
-.item__deprecated strong {
-  color: darken(red, 10%);
-  text-transform: uppercase;
+.item__deprecated {
+  @include inline-block;
+  overflow: hidden;
+  margin-top: 1em;
+  margin-left: 1em;
+
+  strong {
+    float: left;
+    color: darken(red, 10%);
+    text-transform: uppercase;
+  }
+
+  p {
+    float: left;
+    margin: 0;
+    padding-left: .5em;
+  }
 }
 
 /**

@@ -1,4 +1,4 @@
-<section class="main__item  container  item{% if item.alias %}  item--alias{% endif %}{% if item.deprecated %}  item--deprecated{% endif %}" id="{{ item.context.type }}-{{ item.context.name }}">
+<section class="main__item  container  item{% if item.alias %}  item--alias{% endif %}{% if item.deprecated !== false %}  item--deprecated{% endif %}" id="{{ item.context.type }}-{{ item.context.name }}">
 
 {% include '../annotations/name.html.swig' %}
 
