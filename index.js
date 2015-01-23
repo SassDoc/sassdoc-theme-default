@@ -69,6 +69,9 @@ var theme = themeleon(__dirname, function (t) {
   var writeFile = Promise.promisify(fs.writeFile);
 
   t.push(function () {
+    // Set base path from destination path.
+    t.base('index.html');
+
     return renderFile(
       path.resolve(__dirname, 'views/documentation/index.html.swig'),
       t.ctx
