@@ -24,7 +24,7 @@
     "chroma-js": "^0.6.3",
     "extend": "1.*",
     "html-minifier": "^0.6.9",
-    "sassdoc-extras": "2.0.0-rc.4",
+    "sassdoc-extras": "2.0.0-rc.10",
     "swig": "1.4.0",
     "swig-extras": "0.*",
     "themeleon": "^3.0.0"
