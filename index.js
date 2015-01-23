@@ -21,6 +21,10 @@ function safe(fn) {
   return fn;
 }
 
+swig.setFilter('in', function (key, object) {
+  return key in object;
+});
+
 swig.setFilter('display_as_type', safe(function (input) {
   return input.split('|')
     .map(function (_) { return _.trim(); })
