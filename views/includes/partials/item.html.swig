@@ -15,7 +15,7 @@
 
 {% else %}
 
-  <p>Refer to <a href="#{{ item.context.type }}-{{ item.alias[0] }}">{{ item.alias[0] }}</a>.</p>
+  <p>Refer to <a href="#{{ item.context.type }}-{{ item.alias }}">{{ item.alias }}</a>.</p>
 
 {% endif %}
 
