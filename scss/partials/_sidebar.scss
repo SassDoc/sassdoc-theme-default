@@ -2,13 +2,13 @@
  * Sidebar
  */
 .sidebar {
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     @include fixed(top 0 bottom 0 left 0);
     overflow: auto;
-    box-shadow: 1px 0 1.5px rgba(black, .12);
+    box-shadow: 1px 0 1.5px rgba(black, 0.12);
     width: $sidebar-width;
-    z-index: z("default") + 1;
-    border-right: 1px solid color("light-grey");
+    z-index: z('default') + 1;
+    border-right: 1px solid $light-grey;
   }
 }
 
@@ -16,7 +16,7 @@
  * Private and alias annotations
  */
 .sidebar__annotation {
-  color: color("purple");
+  color: $tertiary-color;
 }
 
 $level-1: 1.5em;
@@ -27,17 +27,17 @@ $level-3: $level-2 + 2em;
  * Sidebar items
  */
 .sidebar__item {
-  font-size: .9em;
+  font-size: 0.9em;
 
   a {
-    padding: .5em $level-3;
+    padding: 0.5em $level-3;
     display: block;
     text-decoration: none;
-    color: color("dark-grey");
+    color: $black;
   }
 
   @include on-event {
-    background: color("light-grey");
+    background: $light-grey;
   }
 
   &.is-collapsed + * {
@@ -60,7 +60,7 @@ $level-3: $level-2 + 2em;
  * List item sub-heading
  */
 .sidebar__item--sub-heading {
-  padding: .5em $level-2;
+  padding: 0.5em $level-2;
 
   a {
     color: #888;
@@ -77,9 +77,9 @@ $level-3: $level-2 + 2em;
   &:after {
     @include absolute(right 2em top 50%);
     content: '\25BC';
-    margin-top: -.5em;
-    color: color("medium-grey");
-    font-size: .7em;
+    margin-top: -0.5em;
+    color: $medium-grey;
+    font-size: 0.7em;
   }
 
   &.is-collapsed:after {
@@ -96,7 +96,7 @@ $level-3: $level-2 + 2em;
  * Project description
  */
 .sidebar__description {
-  color: color("light-grey");
+  color: $light-grey;
   padding-right: 2em;
 }
 
@@ -104,7 +104,7 @@ $level-3: $level-2 + 2em;
  * Sidebar header with title
  */
 .sidebar__header {
-  border-bottom: 1px solid color("light-grey");
+  border-bottom: 1px solid $light-grey;
 }
 
 /**
@@ -123,7 +123,7 @@ $level-3: $level-2 + 2em;
 .btn-toggle {
   background: #EFEFEF;
   border: none;
-  border-bottom: 1px solid color("light-grey");
+  border-bottom: 1px solid $light-grey;
   display: block;
   padding: 1em;
   width: 100%;
@@ -131,7 +131,7 @@ $level-3: $level-2 + 2em;
   color: #999;
   font-weight: bold;
   margin: 0;
-  transition: .15s ease-out;
+  transition: 0.15s ease-out;
 
   @include on-event {
     background: #DFDFDF;

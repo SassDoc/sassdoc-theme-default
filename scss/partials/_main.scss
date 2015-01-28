@@ -2,10 +2,10 @@
  * Main wrapper
  */
 .main {
-  background: color("white");
+  background: #f9f9f9;
   position: relative;
 
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     padding-left: $sidebar-width;
     min-height: 45em;
   }
@@ -19,7 +19,7 @@
   padding: 1em 0;
   margin-top: 0;
 
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     padding: 2em 0 0;
   }
 }
@@ -32,11 +32,11 @@
   font-size: 4em;
   text-align: center;
 
-  border-bottom: 5px solid color("yellow");
+  border-bottom: 5px solid $secondary-color;
   padding-bottom: .5em;
   margin-bottom: 1em;
 
-  background: color("purple");
+  background: $tertiary-color;
 }
 
 /**
@@ -44,7 +44,7 @@
  */
 .main__heading--secondary {
   font-size: 3em;
-  color: color("pink");
+  color: $primary-color;
   text-transform: uppercase;
   font-weight: bold;
   padding-top: 0;
@@ -61,8 +61,8 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: .15em;
-    height: .2em;
-    background-color: color("pink");
+    bottom: 0.15em;
+    height: 0.2em;
+    background-color: $primary-color;
   }
 }

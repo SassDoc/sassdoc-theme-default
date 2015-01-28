@@ -2,11 +2,11 @@
  * Univeral box-sizing reset
  */
 html {
-  @include prefixer(box-sizing, border-box, webkit moz);
+  @include prefixer(box-sizing, border-box, 'webkit' 'moz');
 }
 
 *, *::after, *::before {
-  @include prefixer(box-sizing, inherit, webkit moz);
+  @include prefixer(box-sizing, inherit, 'webkit' 'moz');
 }
 
 /**
@@ -22,13 +22,13 @@ body {
  * Links
  */
 a {
-  transition: .15s;
+  transition: 0.15s;
   text-decoration: none;
-  color: color("pink");
+  color: $primary-color;
 
   &:hover {
     &, code {
-      color: color("dark-grey");
+      color: $black;
     }
   }
 }
@@ -37,14 +37,14 @@ a {
  * Vertical rhythm
  */
 table p {
-  margin: 0 0 $vertical-rhythm/3;
+  margin: 0 0 ($vertical-rhythm / 3);
 }
 
 /**
  * Code
  */
 :not(pre) > code {
-  color: color("green");
+  color: $primary-color;
   white-space: nowrap;
   font-weight: normal;
 }
@@ -52,7 +52,7 @@ table p {
 /**
  * Tables
  */
-@include respond-to("small") {
+@include respond-to('small') {
   table, tbody, tr, td, th {
     display: block;
   }
@@ -64,7 +64,7 @@ table p {
   tr {
     padding-bottom: 1em;
     margin-bottom: 1em;
-    border-bottom: 2px solid color("medium-grey");
+    border-bottom: 2px solid $medium-grey;
   }
 
   td, th {

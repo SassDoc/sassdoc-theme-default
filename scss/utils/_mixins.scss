@@ -38,7 +38,7 @@
         }
 
         @else {
-          @warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+          @error 'Invalid value `#{$next}` for offset `#{$offset}`.';
         }
       }
     }
@@ -90,8 +90,8 @@
 
   // If the key doesn't exist in the map
   @else {
-    @warn "No value found for `#{$breakpoint}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
   }
 }
 
@@ -110,14 +110,14 @@
   $border: $size solid transparent;
 
   @if not index(top right bottom left, $direction) {
-    @warn "Direction must be one of top, right, bottom or left.";
+    @error 'Direction must be one of top, right, bottom or left.';
   }
 
   @else {
     @include absolute($position);
     @include size(0);
-    content: "";
-    z-index: z("default") + 1;
+    content: '';
+    z-index: z('default') + 1;
     border-#{opposite-direction($direction)}: ($size * 1.5) solid $color;
 
     @if $direction == top or $direction == bottom {
@@ -151,13 +151,13 @@
 /// @group cross-browser-support
 /// @example
 ///  @include prefixer('transform', 'translate(10px)');
-/// @param {String} $property                   - Property to prefix
-/// @param {*}      $value                      - Value for property
-/// @param {List}   $vendors  [webkit moz ms o] - Vendor prefixes to output
-@mixin prefixer($property, $value, $vendors: webkit moz ms o) {
+/// @param {String} $property                           - Property to prefix
+/// @param {*}      $value                              - Value for property
+/// @param {List}   $vendors  ['webkit' 'moz' 'ms' 'o'] - Vendor prefixes to output
+@mixin prefixer($property, $value, $vendors: 'webkit' 'moz' 'ms' 'o') {
   @if $vendors {
     @each $vendor in $vendors {
-      #{"-" + $vendor + "-" + $property}: #{$value};
+      #{'-' + $vendor + '-' + $property}: #{$value};
     }
   }
 
@@ -172,7 +172,7 @@
 /// @param {Number} $opacity - Opacity level, between 0 and 1
 @mixin opacity($opacity) {
   $opacity: clamp($opacity, 0, 1);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})';
   opacity: $opacity;
 }
 
@@ -190,13 +190,13 @@
 /// @param {Number} $depth - depth level [between 1 and 5]
 /// @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
 /// @requires {function} clamp
-/// @requires {function} color
 /// @requires {function} top-shadow
 /// @requires {function} bottom-shadow
+/// @requires {variable} light-grey
 @mixin card($depth) {
   $depth: clamp($depth, 1, 5);
   box-shadow: bottom-shadow($depth), top-shadow($depth);
-  border: 1px solid color("light-grey");
+  border: 1px solid $light-grey;
 }
 
 /// Event wrapper.
