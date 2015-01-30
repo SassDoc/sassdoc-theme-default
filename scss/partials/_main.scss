@@ -4,12 +4,10 @@
 .main {
   background: color("white");
   position: relative;
-  padding-bottom: 3em;
 
   @include respond-to("medium") {
     padding-left: $sidebar-width;
     min-height: 45em;
-    padding-bottom: 0;
   }
 }
 
@@ -30,15 +28,15 @@
  * Primary headings
  */
 .main__heading {
-  color: color("dark-grey");
+  color: white;
   font-size: 4em;
   text-align: center;
 
-  border-bottom: 5px solid color("pink");
+  border-bottom: 5px solid color("yellow");
   padding-bottom: .5em;
   margin-bottom: 1em;
 
-  background: color("yellow");
+  background: color("purple");
 }
 
 /**
@@ -49,9 +47,14 @@
   color: color("pink");
   text-transform: uppercase;
   font-weight: bold;
-
   padding-top: 0;
   position: relative;
+
+  .container {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 
   &::before {
     content: '';
