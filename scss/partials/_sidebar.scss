@@ -9,6 +9,7 @@
     width: $sidebar-width;
     z-index: z('default') + 1;
     border-right: 1px solid $light-grey;
+    transition: .2s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 }
 

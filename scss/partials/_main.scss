@@ -6,6 +6,7 @@
   position: relative;
 
   @include respond-to('medium') {
+    transition: .2s cubic-bezier(0.215, 0.61, 0.355, 1);
     padding-left: $sidebar-width;
     min-height: 45em;
   }

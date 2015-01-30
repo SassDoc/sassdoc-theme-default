@@ -58,6 +58,16 @@ swig.setFilter('yiq', function (color) {
   return (yiq >= 128) ? '#000' : '#fff';
 });
 
+swig.setFilter('is_color', function (value) {
+  try {
+    chroma(value);
+  } catch(e) {
+    return false;
+  }
+
+  return true;
+});
+
 var theme = themeleon(__dirname, function (t) {
   var assetsPromise = t.copy('assets');
 
