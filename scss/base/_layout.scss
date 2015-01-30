@@ -4,19 +4,19 @@
 .layout-toggle {
   display: none;
 
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     @include absolute(top 10px left 10px);
     font-size: 2em;
     cursor: pointer;
-    color: color("green");
+    color: white;
     display: block;
   }
 }
 
-@include respond-to("medium") {
-  .sidebar-closed {
+.sidebar-closed {
+  @include respond-to('medium') {
     .sidebar {
-      @include prefixer(transform, translateX(-$sidebar-width), webkit ms);
+      @include prefixer(transform, translateX(-$sidebar-width), 'webkit' 'ms');
     }
 
     .main {

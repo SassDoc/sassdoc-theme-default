@@ -2,7 +2,7 @@
  * Footer
  */
 .footer {
-  background: color("light-grey");
+  background: $light-grey;
   padding: 1em 0;
 
   .container {
@@ -18,7 +18,7 @@
 }
 
 /**
- * "Built with SassDoc" mark.
+ * 'Built with SassDoc' mark.
  */
 .footer__watermark {
   position: absolute;
@@ -52,5 +52,5 @@
  * Negates a space width
  */
 .project-info__license {
-  text-indent: -.25em;
+  text-indent: -0.25em;
 }

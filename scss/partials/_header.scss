@@ -5,8 +5,8 @@
   @include clearfix;
   box-shadow: 0 2px 5px rgba(0,0,0,.26);
   padding: 1em 0;
-  background: color("pink");
-  color: color("light-grey");
+  background: $primary-color;
+  color: $light-grey;
   position: relative;
 }
 
@@ -16,13 +16,13 @@
 .header__title {
   font-weight: 500;
   text-align: center;
-  margin: 0 0 .5em 0;
+  margin: 0 0 0.5em 0;
 
   a {
-    color: color("light-grey");
+    color: $light-grey;
   }
 
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     float: left;
     font-size: 1em;
     margin-top: .25em;
@@ -37,10 +37,10 @@
 .header__description {
   padding-bottom: 1em;
 
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     float: left;
     width: calc(100% - 16em); /* 1 */
-    padding-top: .3em;
+    padding-top: 0.3em;
     padding-bottom: 0;
   }
 

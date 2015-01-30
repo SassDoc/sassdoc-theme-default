@@ -9,7 +9,7 @@
  * Function name
  */
 .item__heading {
-  color: color("dark-grey");
+  color: $black;
   margin: 0 0 $vertical-rhythm 0;
   position: relative;
   font-size: 2em;
@@ -21,7 +21,7 @@
  * Name
  */
 .item__name {
-  color: color("pink");
+  color: $primary-color;
 }
 
 /**
@@ -54,9 +54,9 @@
   &::after {
     @include absolute(bottom -2.5em right 0);
     @include opacity(0);
-    color: darken(color("medium-grey"), 10%);
-    font-size: .8em;
-    transition: .2s ease-out;
+    color: darken($medium-grey, 10%);
+    font-size: 0.8em;
+    transition: 0.2s ease-out;
   }
 
   @include on-event {
@@ -65,12 +65,12 @@
     }
   }
 
-  &[data-current-state="expanded"]::after {
-    content: "Click to collapse.";
+  &[data-current-state='expanded']::after {
+    content: 'Click to collapse.';
   }
 
-  &[data-current-state="collapsed"]::after {
-    content: "Click to expand.";
+  &[data-current-state='collapsed']::after {
+    content: 'Click to expand.';
   }
 }
 
@@ -89,7 +89,7 @@
 /**
  * Example code
  */
-.example__code[class*="language-"] {
+.example__code[class*='language-'] {
   margin: 0;
 }
 
@@ -97,11 +97,11 @@
  * Anchor
  */
 .item__anchor {
-  font-size: .6em;
-  color: lighten(color("pink"), 20%);
+  font-size: 0.6em;
+  color: lighten($primary-color, 20%);
 
-  @include respond-to("medium") {
-    @include absolute(right 101% bottom .25em);
+  @include respond-to('medium') {
+    @include absolute(right 101% bottom 0.25em);
     @include opacity(0);
 
     .item:hover & {
@@ -128,7 +128,7 @@
   p {
     float: left;
     margin: 0;
-    padding-left: .5em;
+    padding-left: 0.5em;
   }
 }
 
@@ -136,9 +136,9 @@
  * Type
  */
 .item__type {
-  color: color("medium-grey");
+  color: $medium-grey;
   text-transform: capitalize;
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 /**
@@ -146,13 +146,13 @@
  */
 .item__alias,
 .item__aliased {
-  color: color("medium-grey");
-  font-size: .8em;
+  color: $medium-grey;
+  font-size: 0.8em;
 }
 
 
 .item__sub-heading {
-  color: color("dark-grey");
+  color: $black;
   margin-top: 0;
   margin-bottom: $vertical-rhythm;
   font-size: 1.2em;
@@ -168,10 +168,10 @@
 
   thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid color("medium-grey");
+    border-bottom: 2px solid $medium-grey;
     border-top: none;
     text-align: left;
-    color: mix(color("dark-grey"), white, 70%);
+    color: mix($black, white, 70%);
   }
 
   tbody th {
@@ -179,19 +179,19 @@
   }
 
   td, th {
-    padding: .5em .5em .5em 0;
+    padding: 0.5em 0.5em 0.5em 0;
     vertical-align: top;
   }
 }
 
-@include respond-to("medium") {
+@include respond-to('medium') {
   tbody > .item__parameter:first-of-type > td {
     border-top: none;
   }
 
   .item__parameters td,
   .item__parameters th {
-    border-top: 1px solid color("medium-grey");
+    border-top: 1px solid $medium-grey;
   }
 }
 
@@ -200,8 +200,8 @@
  */
 .item__access {
   text-transform: capitalize;
-  color: color("purple");
-  font-size: .8em;
+  color: $tertiary-color;
+  font-size: 0.8em;
 }
 
 /**
@@ -209,8 +209,8 @@
  */
 .item__since {
   float: right;
-  padding-top: .9em;
-  color: darken(color("medium-grey"), 10%);
+  padding-top: 0.9em;
+  color: darken($medium-grey, 10%);
   margin-bottom: 1em;
 }
 
@@ -221,14 +221,14 @@
   @include absolute(top 1px right 1px);
   background: white;
   padding: 1em;
-  z-index: z("default") + 1;
-  color: darken(color("medium-grey"), 10%);
+  z-index: z('default') + 1;
+  color: darken($medium-grey, 10%);
 }
 
 .item__cross-type {
-  color: lighten(color("dark-grey"), 10%);
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  font-size: .8em;
+  color: lighten($black, 10%);
+  font-family: 'Consolas', 'Monaco', 'Andale Mono', monospace;
+  font-size: 0.8em;
 }
 
 .item__description {
@@ -252,13 +252,13 @@ li.item__description {
 
 .color-preview--inline {
   padding: 2px 4px;
-  border: 1px solid rgba(black, .1);
+  border: 1px solid rgba(black, 0.1);
   border-radius: 3px;
 }
 
 .color-preview--block {
   @include size(2em);
-  @include absolute(top .75em right .75em);
-  border: 1px solid rgba(black, .1);
+  @include absolute(top 0.75em right 0.75em);
+  border: 1px solid rgba(black, 0.1);
   border-radius: 3px;
 }
