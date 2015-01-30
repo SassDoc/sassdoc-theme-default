@@ -44,7 +44,7 @@
  * Searchbar dropdown
  */
 .searchbar__suggestions {
-  @include absolute(top 100% right 0 left 0);
+  @include absolute($top: 100%, $right: 0, $left: 0);
   @include card(1);
   background: white;
   padding: 0;

@@ -3,7 +3,7 @@
  */
 .sidebar {
   @include respond-to('medium') {
-    @include fixed(top 0 bottom 0 left 0);
+    @include fixed($top: 0, $bottom: 0, $left: 0);
     overflow: auto;
     box-shadow: 1px 0 1.5px rgba(black, 0.12);
     width: $sidebar-width;
@@ -76,7 +76,7 @@ $level-3: $level-2 + 2em;
   position: relative;
 
   &:after {
-    @include absolute(right 2em top 50%);
+    @include absolute($right: 2em, $top: 50%);
     content: '\25BC';
     margin-top: -0.5em;
     color: $medium-grey;

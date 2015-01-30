@@ -52,7 +52,7 @@
  */
 .item__code--togglable {
   &::after {
-    @include absolute(bottom -2.5em right 0);
+    @include absolute($bottom: -2.5em, $right: 0);
     @include opacity(0);
     color: darken($medium-grey, 10%);
     font-size: 0.8em;
@@ -101,7 +101,7 @@
   color: lighten($primary-color, 20%);
 
   @include respond-to('medium') {
-    @include absolute(right 101% bottom 0.25em);
+    @include absolute($right: 101%, $bottom: 0.25em);
     @include opacity(0);
 
     .item:hover & {
@@ -218,7 +218,7 @@
  * Link to source
  */
 .item__source-link {
-  @include absolute(top 1px right 1px);
+  @include absolute($top: 1px, $right: 1px);
   background: white;
   padding: 1em;
   z-index: z('default') + 1;
@@ -258,7 +258,7 @@ li.item__description {
 
 .color-preview--block {
   @include size(2em);
-  @include absolute(top 0.75em right 0.75em);
+  @include absolute($top: 0.75em, $right: 0.75em);
   border: 1px solid rgba(black, 0.1);
   border-radius: 3px;
 }

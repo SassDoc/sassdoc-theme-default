@@ -5,7 +5,7 @@
   display: none;
 
   @include respond-to('medium') {
-    @include absolute(top 8px left 20px);
+    @include absolute($top: 8px, $left: 20px);
     font-size: 2em;
     cursor: pointer;
     color: white;
