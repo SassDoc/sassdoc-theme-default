@@ -71,12 +71,15 @@ swig.setFilter('is_color', function (value) {
 var theme = themeleon(__dirname, function (t) {
   var assetsPromise = t.copy('assets');
 
-  if (t.ctx.shortcutIcon && t.ctx.shortcutIcon.type === 'internal') {
+  if (!t.ctx.shortcutIcon) {
+    // Default icon.
+    t.ctx.shortcutIcon = { type: 'internal', url: 'assets/images/favicon.png' };
+  } else if (t.ctx.shortcutIcon.type === 'internal') {
     assetsPromise.then(function () {
       return t.copy(t.ctx.shortcutIcon.path, t.ctx.shortcutIcon.url);
     });
 
-    t.ctx.shortcutIcon.url = 'assets/img/' + t.ctx.shortcutIcon.url;
+    t.ctx.shortcutIcon.url = 'assets/images/' + t.ctx.shortcutIcon.url;
   }
 
   var renderFile = Promise.promisify(swig.renderFile);
