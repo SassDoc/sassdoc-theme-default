@@ -11,7 +11,7 @@ lint:
 dist: $(DIST)
 
 dist/%.js: src/%.js
-	6to5 --experimental $< -o $@
+	6to5 --optional selfContained $< -o $@
 
 min: assets/js/main.min.js
 
