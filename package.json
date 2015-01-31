@@ -20,9 +20,10 @@
     "LICENSE.md",
     "README.md"
   ],
+  "main": "dist",
   "dependencies": {
+    "6to5-runtime": "^3.2.1",
     "chroma-js": "^0.6.3",
-    "core-js": "^0.4.10",
     "extend": "^1.0.0",
     "fs-extra": "^0.1.0",
     "html-minifier": "^0.6.9",
