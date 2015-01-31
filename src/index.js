@@ -43,7 +43,7 @@ export default (dest, ctx) => {
   const index = path.resolve(__dirname, '../views/documentation/index.html.swig');
 
   return Promise.all([
-    copy('assets', path.resolve(dest, 'assets'))
+    copy(path.resolve(__dirname, '../assets'), path.resolve(dest, 'assets'))
       .then(shortcutIcon(dest, ctx)),
 
     renderFile(index, ctx)
