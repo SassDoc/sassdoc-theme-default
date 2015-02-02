@@ -32,7 +32,7 @@
 
       {% if display.watermark %}
         <a class="footer__watermark" href="http://sassdoc.com">
-          <img src="{{ base }}/assets/images/logo_light_inline.svg" alt="SassDoc Logo" />
+          <img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo" />
         </a>
       {% endif %}
     </div>

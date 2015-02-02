@@ -1,7 +1,18 @@
-SASS = sass
-UGLIFY = node_modules/uglify-js/bin/uglifyjs
+PATH := $(PWD)/node_modules/.bin:$(PATH)
 
-all: sass min
+SOURCES := $(wildcard src/*.js)
+DIST := $(SOURCES:src/%=dist/%)
+
+all: lint dist min sass
+
+lint:
+	jshint $(SOURCES)
+
+dist: $(DIST)
+
+dist/%.js: src/%.js
+	mkdir -p $(@D)
+	6to5 --optional selfContained $< -o $@
 
 min: assets/js/main.min.js
 
@@ -11,10 +22,12 @@ assets/js/main.min.js: \
 	assets/js/search.js \
 	assets/js/main.js \
 	assets/js/vendor/prism.min.js
-	cat $^ | $(UGLIFY) > $@
+	cat $^ | uglifyjs > $@
 
 sass:
-	$(SASS) --update scss:assets/css --style compressed
+	sass --update scss:assets/css --style compressed
 
 clean:
-	$(RM) -r assets/js/main.min.js assets/css
+	rm -rf $(DIST) assets/js/main.min.js assets/css
+
+.PHONY: all dist min sass clean
