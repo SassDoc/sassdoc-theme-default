@@ -28,7 +28,7 @@
     "fs-extra": "^0.1.0",
     "html-minifier": "^0.6.9",
     "promise-denodeify": "^1.2.2",
-    "sassdoc-extras": "^2.0.0",
+    "sassdoc-extras": "^2.1.0",
     "swig": "1.4.0",
     "swig-extras": "^0.0.1"
   },
