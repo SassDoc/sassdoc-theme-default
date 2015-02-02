@@ -5,6 +5,9 @@ DIST := $(SOURCES:src/%=dist/%)
 
 all: lint dist min sass
 
+publish: lint dist
+	npm publish
+
 lint:
 	jshint $(SOURCES)
 
