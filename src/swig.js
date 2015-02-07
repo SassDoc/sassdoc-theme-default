@@ -38,7 +38,7 @@ const yiqContrast = rgb =>
 const getChannel = (start, hex) =>
   parseInt(hex.substr(start, 2), 16);
 
-const hexTorgb = hex =>
+const hexToRgb = hex =>
   [0, 2, 4].map(x => getChannel(x, hex));
 
 const colorToHex = color =>
