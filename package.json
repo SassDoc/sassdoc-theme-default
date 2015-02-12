@@ -24,10 +24,10 @@
   "dependencies": {
     "6to5-runtime": "^3.2.1",
     "chroma-js": "^0.6.3",
+    "es6-denodeify": "^0.1.0",
     "extend": "^1.0.0",
     "fs-extra": "^0.16.3",
     "html-minifier": "^0.6.9",
-    "promise-denodeify": "^1.2.2",
     "sassdoc-extras": "^2.1.0",
     "swig": "1.4.0",
     "swig-extras": "^0.0.1"
