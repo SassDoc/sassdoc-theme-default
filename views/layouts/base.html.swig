@@ -28,6 +28,9 @@
     {# Include top navbar #}
     {% include "../includes/partials/header.html.swig" with project_title %}
 
+    {# Include description #}
+    {% include "../includes/partials/description.html.swig" %}
+
     {% block content %}{% endblock %}
 
     {# Include footer #}
