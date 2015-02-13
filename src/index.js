@@ -1,6 +1,6 @@
 import chroma from 'chroma-js';
 import def from '../default';
-import denodeify from 'promise-denodeify';
+import denodeify from 'es6-denodeify';
 import extend  from 'extend';
 import fs from 'fs';
 import fse from 'fs-extra';
@@ -9,9 +9,11 @@ import path from 'path';
 import sassdocExtras from 'sassdoc-extras';
 import swig from './swig';
 
-const copy = denodeify(fse.copy, Promise);
-const renderFile = denodeify(swig.renderFile, Promise);
-const writeFile = denodeify(fs.writeFile, Promise);
+denodeify = denodeify(Promise);
+
+const copy = denodeify(fse.copy);
+const renderFile = denodeify(swig.renderFile);
+const writeFile = denodeify(fs.writeFile);
 
 const applyDefaults = ctx =>
   extend({}, def, ctx, {
