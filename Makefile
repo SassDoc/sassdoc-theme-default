@@ -15,7 +15,7 @@ dist: $(DIST)
 
 dist/%.js: src/%.js
 	mkdir -p $(@D)
-	6to5 --optional selfContained $< -o $@
+	6to5 $< -o $@
 
 min: assets/js/main.min.js
 
@@ -32,5 +32,8 @@ sass:
 
 clean:
 	rm -rf $(DIST) assets/js/main.min.js assets/css
+
+rebuild:
+	rm -rf node_modules && npm install
 
 .PHONY: all dist min sass clean

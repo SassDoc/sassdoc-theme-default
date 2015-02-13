@@ -1,6 +1,7 @@
 import chroma from 'chroma-js';
 import def from '../default';
-import denodeify from 'promise-denodeify';
+import { Promise } from 'es6-promise';
+import denodeify from 'es6-denodeify';
 import extend  from 'extend';
 import fs from 'fs';
 import fse from 'fs-extra';
@@ -9,9 +10,11 @@ import path from 'path';
 import sassdocExtras from 'sassdoc-extras';
 import swig from './swig';
 
-const copy = denodeify(fse.copy, Promise);
-const renderFile = denodeify(swig.renderFile, Promise);
-const writeFile = denodeify(fs.writeFile, Promise);
+denodeify = denodeify(Promise);
+
+const copy = denodeify(fse.copy);
+const renderFile = denodeify(swig.renderFile);
+const writeFile = denodeify(fs.writeFile);
 
 const applyDefaults = ctx =>
   extend({}, def, ctx, {
@@ -32,12 +35,7 @@ const shortcutIcon = (dest, ctx) => {
 
 export default (dest, ctx) => {
   ctx = applyDefaults(ctx);
-
-  sassdocExtras.markdown(ctx);
-  sassdocExtras.display(ctx);
-  sassdocExtras.groupName(ctx);
-  sassdocExtras.shortcutIcon(ctx);
-
+  sassdocExtras(ctx, 'markdown', 'display', 'groupName', 'shortcutIcon');
   ctx.data.byGroupAndType = sassdocExtras.byGroupAndType(ctx.data);
 
   const index = path.resolve(__dirname, '../views/documentation/index.html.swig');

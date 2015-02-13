@@ -3,7 +3,7 @@
   "description": "SassDoc's default theme",
   "title": "SassDoc Default Theme",
   "author": "SassDoc team",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "keywords": [
     "sassdoc-theme"
   ],
@@ -22,18 +22,18 @@
   ],
   "main": "dist",
   "dependencies": {
-    "6to5-runtime": "^3.2.1",
     "chroma-js": "^0.6.3",
-    "extend": "^1.0.0",
-    "fs-extra": "^0.1.0",
-    "html-minifier": "^0.6.9",
-    "promise-denodeify": "^1.2.2",
-    "sassdoc-extras": "^2.0.0",
+    "es6-denodeify": "^0.1.0",
+    "es6-promise": "^2.0.1",
+    "extend": "^2.0.0",
+    "fs-extra": "^0.16.3",
+    "html-minifier": "^0.7.0",
+    "sassdoc-extras": "^2.1.0",
     "swig": "1.4.0",
     "swig-extras": "^0.0.1"
   },
   "devDependencies": {
-    "6to5": "^3.2.1",
+    "6to5": "^3.6.0",
     "jshint": "^2.6.0",
     "uglify-js": "^2.4.15"
   }

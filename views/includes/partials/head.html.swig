@@ -6,5 +6,15 @@
 <meta name="viewport" content="width=device-width">
 <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible">
 
+<!-- Open Graph tags -->
+<meta property="og:title" content="{{ project_title }} - SassDoc" />
+<meta property="og:type" content="website" />
+
+{% if package.description %}
+<meta property="og:description" content="{{ package.description | safe }}" />
+{% else %}
+<meta property="og:description" content="Release the docs!" />
+{% endif %}
+
 <!-- Thanks to Sass-lang.com for the icons -->
 <link href="{{ shortcutIcon.url }}" rel="shortcut icon">
