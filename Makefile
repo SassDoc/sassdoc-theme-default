@@ -33,4 +33,7 @@ sass:
 clean:
 	rm -rf $(DIST) assets/js/main.min.js assets/css
 
+rebuild:
+	rm -rf node_modules && npm install
+
 .PHONY: all dist min sass clean
