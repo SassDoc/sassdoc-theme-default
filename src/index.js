@@ -1,5 +1,6 @@
 import chroma from 'chroma-js';
 import def from '../default';
+import { Promise } from 'es6-promise';
 import denodeify from 'es6-denodeify';
 import extend  from 'extend';
 import fs from 'fs';
