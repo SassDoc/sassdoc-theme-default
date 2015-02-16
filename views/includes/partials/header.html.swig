@@ -1,11 +1,5 @@
 <header class="header" role="banner">
   <div class="container">
-  {% if package.description %}
-    <div class="header__description">
-      {{ package.description | safe }}
-    </div>
-  {% endif %}
-
     <div class="sassdoc__searchbar  searchbar">
        <label for="js-search-input" class="visually-hidden">Search</label>
        <div class="searchbar__form" id="js-search">
