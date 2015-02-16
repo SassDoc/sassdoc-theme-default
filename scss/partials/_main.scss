@@ -29,15 +29,15 @@
  * Primary headings
  */
 .main__heading {
-  color: white;
+  color: $tertiary-color;
   font-size: 4em;
   text-align: center;
 
-  border-bottom: 5px solid $secondary-color;
+  border-bottom: 5px solid rgba($tertiary-color, .2);
   padding-bottom: .5em;
   margin-bottom: 1em;
 
-  background: $tertiary-color;
+  background: rgba($tertiary-color, .1);
 }
 
 /**
