@@ -1,11 +1,4 @@
 /**
- * Description
- */
-.description {
-  padding: 1em 0;
-}
-
-/**
  * Main wrapper
  */
 .main {
@@ -16,6 +9,19 @@
     transition: .2s cubic-bezier(0.215, 0.61, 0.355, 1);
     padding-left: $sidebar-width;
     min-height: 45em;
+  }
+}
+
+/**
+ * Main sections
+ */
+.main__section {
+  margin-top: 5em;
+  border-top: 5px solid $secondary-color;
+
+  .header + & {
+    margin-top: 0;
+    border-top: none;
   }
 }
 
