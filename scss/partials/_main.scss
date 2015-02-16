@@ -17,7 +17,7 @@
  */
 .main__section {
   margin-top: 5em;
-  border-top: 5px solid $secondary-color;
+  border-top: 5px solid rgba($tertiary-color, .2);
 
   .header + & {
     margin-top: 0;
