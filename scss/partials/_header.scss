@@ -3,7 +3,7 @@
  */
 .header {
   @include clearfix;
-  @include fixed( $left: $sidebar-width, $top: 0, $right: 0 );
+  @include fixed($left: $sidebar-width, $top: 0, $right: 0);
   box-shadow: 0 2px 5px rgba(0,0,0,.26);
   padding: 1em 0;
   background: $primary-color;
