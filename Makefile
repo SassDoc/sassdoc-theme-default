@@ -15,7 +15,7 @@ dist: $(DIST)
 
 dist/%.js: src/%.js
 	mkdir -p $(@D)
-	6to5 $< -o $@
+	babel $< -o $@
 
 min: assets/js/main.min.js
 
