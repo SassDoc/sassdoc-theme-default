@@ -33,7 +33,7 @@
     "swig-extras": "^0.0.1"
   },
   "devDependencies": {
-    "6to5": "^3.6.0",
+    "babel": "4.3.*",
     "jshint": "^2.6.0",
     "uglify-js": "^2.4.15"
   }
