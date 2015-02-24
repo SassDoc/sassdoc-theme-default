@@ -13,6 +13,19 @@
 }
 
 /**
+ * Main sections
+ */
+.main__section {
+  margin-top: 5em;
+  border-top: 5px solid rgba($tertiary-color, .2);
+
+  .header + & {
+    margin-top: 0;
+    border-top: none;
+  }
+}
+
+/**
  * Main titles
  */
 .main__heading,
@@ -30,7 +43,7 @@
  */
 .main__heading {
   color: $tertiary-color;
-  font-size: 4em;
+  font-size: 3.5em;
   text-align: center;
 
   border-bottom: 5px solid rgba($tertiary-color, .2);
