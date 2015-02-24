@@ -3,7 +3,7 @@
   "description": "SassDoc's default theme",
   "title": "SassDoc Default Theme",
   "author": "SassDoc team",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "keywords": [
     "sassdoc-theme"
   ],
@@ -33,7 +33,7 @@
     "swig-extras": "^0.0.1"
   },
   "devDependencies": {
-    "6to5": "^3.6.0",
+    "babel": "4.3.*",
     "jshint": "^2.6.0",
     "uglify-js": "^2.4.15"
   }
