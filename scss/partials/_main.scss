@@ -8,6 +8,7 @@
   @include respond-to('medium') {
     transition: .2s cubic-bezier(0.215, 0.61, 0.355, 1);
     padding-left: $sidebar-width;
+	padding-top: 4em;
     min-height: 45em;
   }
 }
@@ -62,6 +63,7 @@
   text-transform: uppercase;
   font-weight: bold;
   padding-top: 0;
+  margin-bottom: $vertical-rhythm * -2;
   position: relative;
 
   .container {

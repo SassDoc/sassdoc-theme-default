@@ -1,8 +1,5 @@
-/**
- * Item
- */
-.item {
-  margin-bottom: 4em;
+.main__section {
+	margin-bottom: $vertical-rhythm * 3;
 }
 
 /**
@@ -10,7 +7,7 @@
  */
 .item__heading {
   color: $black;
-  margin: 0 0 $vertical-rhythm 0;
+  margin: $vertical-rhythm * 3 0 $vertical-rhythm 0;
   position: relative;
   font-size: 2em;
   font-weight: 300;
