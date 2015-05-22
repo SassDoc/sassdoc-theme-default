@@ -255,7 +255,8 @@ li.item__description {
 
 .color-preview--block {
   @include size(2em);
-  @include absolute($top: 0.75em, $right: 0.75em);
+  @include absolute($top: 140%, $right: 0);
+  top: calc(100% + 20px);
   border: 1px solid rgba(black, 0.1);
   border-radius: 3px;
 }
