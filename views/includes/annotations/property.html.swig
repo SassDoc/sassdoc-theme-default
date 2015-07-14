@@ -24,8 +24,8 @@
         {% if not prop.default %}
           &mdash;<span class="visually-hidden"> none</span>
         {% else %}
-          {% if (prop.type|lower).indexOf('color') > -1 and prop.default|is_color == true %}
-            <code class="color-preview--inline" style="background: {{ prop.default }}; color: {{ prop.default | yiq }};">{{ prop.default }}</code>
+          {% if (prop.type|lower).indexOf('color') > -1 and prop.resolvedValue|is_color == true %}
+            <code class="color-preview--inline" style="background: {{ prop.resolvedValue }}; color: {{ prop.resolvedValue | yiq }};">{{ prop.default }}</code>
           {% else %}
             <code>{{ prop.default }}</code>
           {% endif %}

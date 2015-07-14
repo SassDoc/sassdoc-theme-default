@@ -28,7 +28,7 @@
     "extend": "^2.0.0",
     "fs-extra": "^0.16.3",
     "html-minifier": "^0.7.0",
-    "sassdoc-extras": "^2.2.0",
+    "sassdoc-extras": "^2.4.0",
     "swig": "1.4.0",
     "swig-extras": "^0.0.1"
   },
