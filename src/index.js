@@ -35,7 +35,15 @@ const shortcutIcon = (dest, ctx) => {
 
 export default (dest, ctx) => {
   ctx = applyDefaults(ctx);
-  sassdocExtras(ctx, 'description', 'markdown', 'display', 'groupName', 'shortcutIcon', 'sort');
+  sassdocExtras(ctx,
+    'description',
+    'markdown',
+    'display',
+    'groupName',
+    'shortcutIcon',
+    'sort',
+    'resolveVariables'
+  );
   ctx.data.byGroupAndType = sassdocExtras.byGroupAndType(ctx.data);
 
   const index = path.resolve(__dirname, '../views/documentation/index.html.swig');
