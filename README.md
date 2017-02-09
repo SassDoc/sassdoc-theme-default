@@ -1,5 +1,7 @@
 # SassDoc Default Theme
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/SassDoc/sassdoc-theme-default.svg)](https://greenkeeper.io/)
+
 This is [SassDoc](https://github.com/SassDoc/sassdoc)'s default theme which means this is the theme that will be used when running SassDoc without a custom theme.
 
 This theme uses [Themeleon](https://github.com/themeleon/themeleon) as a theme engine, and [themeleon-swig](https://github.com/themeleon/themeleon-swig) as a template engine, directly plugged into Themeleon.
