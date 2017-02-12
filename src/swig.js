@@ -1,4 +1,3 @@
-import assert from 'assert';
 import chroma from 'chroma-js';
 import { Swig } from 'swig';
 import swigExtras from 'swig-extras';
