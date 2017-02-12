@@ -3,8 +3,7 @@ import def from '../default';
 import { Promise } from 'es6-promise';
 import denodeify from 'es6-denodeify';
 import extend  from 'extend';
-import fs from 'fs';
-import fse from 'fs-extra';
+import fs from 'fs-extra';
 import { minify } from 'html-minifier';
 import path from 'path';
 import sassdocExtras from 'sassdoc-extras';
@@ -12,7 +11,7 @@ import swig from './swig';
 
 denodeify = denodeify(Promise);
 
-const copy = denodeify(fse.copy);
+const copy = denodeify(fs.copy);
 const renderFile = denodeify(swig.renderFile);
 const writeFile = denodeify(fs.writeFile);
 
