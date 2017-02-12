@@ -27,7 +27,7 @@
     "es6-promise": "^2.0.1",
     "extend": "^2.0.0",
     "fs-extra": "^2.0.0",
-    "html-minifier": "^0.7.0",
+    "html-minifier": "^3.3.1",
     "sassdoc-extras": "^2.4.0",
     "swig": "1.4.0",
     "swig-extras": "^0.0.1"
