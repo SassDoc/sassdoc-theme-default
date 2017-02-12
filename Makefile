@@ -9,7 +9,7 @@ publish: lint dist
 	npm publish
 
 lint:
-	jshint $(SOURCES)
+	standard $(SOURCES)
 
 dist:
 	rm -rf $@
