@@ -11,11 +11,9 @@ publish: lint dist
 lint:
 	jshint $(SOURCES)
 
-dist: $(DIST)
-
-dist/%.js: src/%.js
-	mkdir -p $(@D)
-	babel $< -o $@
+dist:
+	rm -rf $@
+	babel src -d $@
 
 min: assets/js/main.min.js
 

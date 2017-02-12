@@ -22,6 +22,7 @@
   ],
   "main": "dist",
   "dependencies": {
+    "babel-runtime": "^6.22.0",
     "chroma-js": "^1.2.2",
     "es6-denodeify": "^0.1.0",
     "es6-promise": "^4.0.5",
@@ -33,7 +34,9 @@
     "swig-extras": "^0.0.1"
   },
   "devDependencies": {
-    "babel": "^4.4.0",
+    "babel-cli": "^6.22.2",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
     "jshint": "^2.9.4",
     "uglify-js": "^2.4.15"
   }
