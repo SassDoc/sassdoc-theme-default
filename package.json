@@ -38,7 +38,7 @@
     "babel-cli": "^6.22.2",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-latest": "^6.22.0",
-    "jshint": "^2.9.4",
+    "standard": "^8.6.0",
     "uglify-js": "^2.4.15"
   }
 }
