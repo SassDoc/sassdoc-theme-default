@@ -29,11 +29,12 @@
 
 {# Plain CSS #}
 {% elseif item.context.type == "css" %}
-
-<div class="item__code-wrapper">
-  <pre class="item__code  language-scss"><code>{{ item.context.name }} {
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="<code>{{ item.context.name }} {
   {{ item.context.value }}
-}</code></pre>
+}</code>"
+    data-collapsed="{{ item.context.name }} { ... }"><code>{{ item.context.name }} { ... }</code></pre>
 </div>
 
 {# Functions and mixins #}
