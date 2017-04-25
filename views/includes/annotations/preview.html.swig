@@ -27,6 +27,15 @@
   {% endif %}
 </div>
 
+{# Plain CSS #}
+{% elseif item.context.type == "css" %}
+
+<div class="item__code-wrapper">
+  <pre class="item__code  language-scss"><code>{{ item.context.name }} {
+  {{ item.context.value }}
+}</code></pre>
+</div>
+
 {# Functions and mixins #}
 {% else %}
 
