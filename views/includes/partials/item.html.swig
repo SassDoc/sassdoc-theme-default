@@ -12,10 +12,6 @@
     {% set path = '../annotations/' + annotation + '.html.swig' %}
     {% include path %}
   {% endfor %}
-  
-  {% if item.context.type == "css" %}
-    {% include '../annotations/description.html.swig' %}
-  {% endif %}
 
 {% else %}
 
