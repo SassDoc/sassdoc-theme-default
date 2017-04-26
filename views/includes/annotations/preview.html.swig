@@ -29,6 +29,7 @@
 
 {# Plain CSS #}
 {% elseif item.context.type == "css" %}
+<div class="item__code-wrapper">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
     data-expanded="<code>{{ item.context.name }} {
