@@ -16,6 +16,9 @@ body {
   font: 1em/1.35 $text-font-stack;
   overflow: auto;
   margin: 0;
+  //better font render in mac
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /**
