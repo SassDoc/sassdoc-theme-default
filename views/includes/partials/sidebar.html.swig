@@ -27,7 +27,7 @@
 
         {# If items to be displayed in type #}
         {% if items.length > 0 %}
-          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="{{ group_name + '-' + type }}"><a href="#{{ group_name }}-{{ type }}">{{ (type + 's') }}</a></p>
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="{{ group_name + '-' + type }}"><a href="#{{ group_name }}-{{ type }}">{{ type | pluralize }}</a></p>
 
           {# Loop over the items #}
           {% for item in items %}

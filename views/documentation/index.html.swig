@@ -28,7 +28,7 @@
             <section class="main__sub-section" id="{{ group_name }}-{{ type }}">
               <h2 class="main__heading--secondary">
                 <div class="container">
-                  {{ (type + 's') }}
+                  {{ type | pluralize }}
                 </div>
               </h2>
 
