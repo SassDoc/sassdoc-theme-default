@@ -43,6 +43,12 @@ const hexToRgb = hex =>
 const colorToHex = color =>
   chroma(color).hex().substr(1)
 
+const pluralize = input =>
+  input.toLowerCase()
+    .substring(input.length - 1) === 's'
+      ? input
+      : input + 's'
+
 /**
  * Normalises a CSS color, then uses the YIQ algorithm to get the
  * correct contrast.
@@ -60,3 +66,4 @@ swig.setFilter('in', (key, object) => key in object)
 swig.setFilter('is_color', isColor)
 swig.setFilter('display_as_type', safe(displayAsType))
 swig.setFilter('yiq', maybeYiqContrast)
+swig.setFilter('pluralize', pluralize)
