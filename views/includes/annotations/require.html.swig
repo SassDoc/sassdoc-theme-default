@@ -21,7 +21,7 @@
       </li>
     {% else %}
       <li class="item__description  item__description--inline"><span class="item__cross-type">[{{ require.item.context.type }}]</span>
-        <a href="#{{ require.item.group }}-{{ require.item.context.type }}-{{ require.item.context.name }}"><code>{{ require.item.context.name }}</code></a>
+        <a href="#{{ require.item.group }}-{{ require.item.context.type }}-{{ require.item.context.name }}"><code>{{ require.item.context.name | unescape }}</code></a>
         {% if require.description %}
           &mdash; {{ require.description }}
         {% endif %}

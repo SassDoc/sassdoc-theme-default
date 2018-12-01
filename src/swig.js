@@ -46,8 +46,13 @@ const colorToHex = color =>
 const pluralize = input =>
   input.toLowerCase()
     .substring(input.length - 1) === 's'
-      ? input
-      : input + 's'
+    ? input
+    : input + 's'
+
+// Prevent escaping chars from being printed.
+// See sassdoc/sassdoc#531
+const unescape = input =>
+  input.replace(/\\/g, '')
 
 /**
  * Normalises a CSS color, then uses the YIQ algorithm to get the
@@ -67,3 +72,4 @@ swig.setFilter('is_color', isColor)
 swig.setFilter('display_as_type', safe(displayAsType))
 swig.setFilter('yiq', maybeYiqContrast)
 swig.setFilter('pluralize', pluralize)
+swig.setFilter('unescape', unescape)
