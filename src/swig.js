@@ -49,6 +49,8 @@ const pluralize = input =>
     ? input
     : input + 's'
 
+// Prevent escaping chars from being printed.
+// See sassdoc/sassdoc#531
 const unescape = input =>
   input.replace(/\\/g, '')
 
