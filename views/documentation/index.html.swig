@@ -20,6 +20,14 @@
           </div>
         </h1>
 
+        {% if group_name in groupDescriptions %}
+          <div class="main__description">
+            <div class="container">
+              {{ groupDescriptions[group_name] | raw }}
+            </div>
+          </div>
+        {% endif %}
+
         {# Loop over the types #}
         {% for type, items in group %}
 
