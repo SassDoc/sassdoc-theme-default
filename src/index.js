@@ -44,7 +44,7 @@ export default (dest, ctx) => {
   )
   ctx.data.byGroupAndType = sassdocExtras.byGroupAndType(ctx.data)
 
-  const index = path.resolve(__dirname, '../views/documentation/index.html.swig')
+  const index = path.resolve(__dirname, '../views/documentation/index.html.njk')
 
   return Promise.all([
     copy(path.resolve(__dirname, '../assets'), path.resolve(dest, 'assets'))
