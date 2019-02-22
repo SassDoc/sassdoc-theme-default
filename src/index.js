@@ -6,12 +6,12 @@ import fs from 'fs-extra'
 import { minify } from 'html-minifier'
 import path from 'path'
 import sassdocExtras from 'sassdoc-extras'
-import swig from './swig'
+import nunjucks from './nunjucks'
 
 const denodeify = es6denodeify(Promise)
 
 const copy = denodeify(fs.copy)
-const renderFile = denodeify(swig.renderFile)
+const renderFile = denodeify(nunjucks.render)
 const writeFile = denodeify(fs.writeFile)
 
 const applyDefaults = ctx =>
