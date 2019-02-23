@@ -1,7 +1,7 @@
 import chroma from 'chroma-js'
 import nunjucks from 'nunjucks'
 
-let nunjucksEnv = new nunjucks.Environment()
+var nunjucksEnv = nunjucks.configure('views');
 
 const safe = fn =>
   (fn.safe = true) && fn
@@ -67,4 +67,15 @@ nunjucksEnv.addFilter('yiq', maybeYiqContrast)
 nunjucksEnv.addFilter('pluralize', pluralize)
 nunjucksEnv.addFilter('unescape', unescape)
 
-export default nunjucks
+// debug
+nunjucksEnv.addGlobal('debug', function () {
+  return this.ctx;
+})
+
+/**
+ * Warning: The simple API (above; e.g. nunjucks.render) always uses the configuration from the most recent call to nunjucks.configure. Since this is implicit and can result in unexpected side effects, use of the simple API is discouraged in most cases (especially if configure is used); instead, explicitly create an environment using var env = nunjucks.configure(...) and then call env.render(...) etc.
+ *
+ * Investigate why it doens't work like this if I export nunjucksEnv instead
+ * https://mozilla.github.io/nunjucks/api.html#configure
+ */
+export default nunjucks;
