@@ -1,4 +1,4 @@
-{% extends '../layouts/base.html.swig' %}
+{% extends '../layouts/base.html.njk' %}
 
 {% block content %}
 
@@ -42,7 +42,7 @@
 
               {# Loop over the items #}
               {% for item in items %}
-                {% include "../includes/partials/item.html.swig" with context %}
+                {% include "../includes/partials/item.html.njk" %}
               {% endfor %}
             </section>
           {% endif %}
@@ -57,5 +57,5 @@
 
 {# Include sidebar #}
 {% block sidebar %}
-  {% include "../includes/partials/sidebar.html.swig" %}
+  {% include "../includes/partials/sidebar.html.njk" %}
 {% endblock %}
