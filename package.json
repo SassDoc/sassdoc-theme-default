@@ -27,7 +27,7 @@
     "chroma-js": "^1.2.2",
     "es6-denodeify": "^0.1.0",
     "es6-promise": "^4.0.5",
-    "extend": "^3.0.0",
+    "extend": "^3.0.2",
     "fs-extra": "^2.0.0",
     "html-minifier": "^3.3.1",
     "sassdoc-extras": "^2.4.0",
