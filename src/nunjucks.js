@@ -1,7 +1,7 @@
 import chroma from 'chroma-js'
 import nunjucks from 'nunjucks'
 
-var nunjucksEnv = nunjucks.configure('views');
+let nunjucksEnv = nunjucks.configure('views')
 
 const safe = fn =>
   (fn.safe = true) && fn
@@ -69,7 +69,7 @@ nunjucksEnv.addFilter('unescape', unescape)
 
 // debug
 nunjucksEnv.addGlobal('debug', function () {
-  return this.ctx;
+  return this.ctx
 })
 
 /**
@@ -78,4 +78,4 @@ nunjucksEnv.addGlobal('debug', function () {
  * Investigate why it doens't work like this if I export nunjucksEnv instead
  * https://mozilla.github.io/nunjucks/api.html#configure
  */
-export default nunjucks;
+export default nunjucks
