@@ -73,9 +73,13 @@ nunjucksEnv.addGlobal('debug', function () {
 })
 
 /**
- * Warning: The simple API (above; e.g. nunjucks.render) always uses the configuration from the most recent call to nunjucks.configure. Since this is implicit and can result in unexpected side effects, use of the simple API is discouraged in most cases (especially if configure is used); instead, explicitly create an environment using var env = nunjucks.configure(...) and then call env.render(...) etc.
+ * "Warning: The simple API (above; e.g. nunjucks.render) always uses the configuration
+ * from the most recent call to nunjucks.configure. Since this is implicit and can result
+ * in unexpected side effects, use of the simple API is discouraged in most cases
+ * (especially if configure is used); instead, explicitly create an environment using
+ * var env = nunjucks.configure(...) and then call env.render(...) etc."
  *
- * Investigate why it doens't work like this if I export nunjucksEnv instead
- * https://mozilla.github.io/nunjucks/api.html#configure
+ * @link https://mozilla.github.io/nunjucks/api.html#configure
+ * Investigate why it doesn't work like this if we export nunjucksEnv instead
  */
 export default nunjucks
