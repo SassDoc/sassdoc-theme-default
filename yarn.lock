@@ -2719,10 +2719,10 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sassdoc-extras@^2.4.0:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/sassdoc-extras/-/sassdoc-extras-2.4.3.tgz#602e3f5c7a27e335f334ac3218b2fdece9d395ec"
-  integrity sha512-oV42OSIRHDKn5xgNvZNNBCYjWGuX1u+PifHMi0JDZ9mJV+Y0m7KuvSvNTh+F7dLKSqXYZbbCZQa1b+AXgZjEHA==
+sassdoc-extras@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/sassdoc-extras/-/sassdoc-extras-2.5.0.tgz#ebea981584f8264ba787d9ffe7719a690bb090f3"
+  integrity sha512-xUE3b6aQvTtAD1amW7qLU2xYgH8AgnvTvW8ljCOW07ag5pcY3KpyvwyvB5+cV5eTb5kMGrqw/JD6a5lc0+0+ug==
   dependencies:
     marked "^0.3.19"
 
@@ -2965,10 +2965,10 @@ swig-extras@0.0.1:
   dependencies:
     markdown "~0.5.0"
 
-swig@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/swig/-/swig-1.4.0.tgz#e0e606a0899f886a7aee7a45d1b398c2b25d25d1"
-  integrity sha1-4OYGoImfiGp67npF0bOYwrJdJdE=
+swig@1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/swig/-/swig-1.4.2.tgz#4085ca0453369104b5d483e2841b39b7ae1aaba5"
+  integrity sha1-QIXKBFM2kQS11IPihBs5t64aq6U=
   dependencies:
     optimist "~0.6"
     uglify-js "~2.4"
