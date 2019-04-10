@@ -1,7 +1,8 @@
 import chroma from 'chroma-js'
 import nunjucks from 'nunjucks'
+import path from 'path'
 
-let nunjucksEnv = nunjucks.configure('views')
+let nunjucksEnv = nunjucks.configure(path.resolve(__dirname, '..', 'views'))
 
 const safe = fn =>
   (fn.safe = true) && fn
