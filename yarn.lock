@@ -2965,10 +2965,10 @@ swig-extras@0.0.1:
   dependencies:
     markdown "~0.5.0"
 
-swig@1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/swig/-/swig-1.4.2.tgz#4085ca0453369104b5d483e2841b39b7ae1aaba5"
-  integrity sha1-QIXKBFM2kQS11IPihBs5t64aq6U=
+swig@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/swig/-/swig-1.4.0.tgz#e0e606a0899f886a7aee7a45d1b398c2b25d25d1"
+  integrity sha1-4OYGoImfiGp67npF0bOYwrJdJdE=
   dependencies:
     optimist "~0.6"
     uglify-js "~2.4"
