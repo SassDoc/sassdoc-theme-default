@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
+## [2.8.1] - 2019-04-22
 ### Fixed
   * Fix a remaining `raw` Swig filter after replacement.
 
@@ -19,7 +21,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   * Add group description display.
 
-[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.8.0...HEAD
+[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.8.1...HEAD
+[2.8.1]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.1
 [2.8.0]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.0
 [2.7.0]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.7.0
 [2.6.4]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.6.4
