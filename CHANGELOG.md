@@ -7,10 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.8.0] - 2019-04-22
+### Changed
+  * Template engine replacement.  
+    Swap Swig per Nunjucks. [[#104]](https://github.com/SassDoc/sassdoc-theme-default/pull/104)  
+    This should be transparent for end users.
+
 ## [2.7.0] - 2019-04-10
 ### Added
   * Add group description display.
 
-[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.7.0...HEAD
+[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.8.0...HEAD
+[2.8.0]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.0
 [2.7.0]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.7.0
 [2.6.4]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.6.4
