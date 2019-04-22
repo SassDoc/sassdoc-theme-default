@@ -30,13 +30,14 @@
     "extend": "^3.0.2",
     "fs-extra": "^2.0.0",
     "html-minifier": "^3.5.21",
-    "sassdoc-extras": "^2.5.0",
-    "nunjucks": "^3.1.7"
+    "nunjucks": "^3.1.7",
+    "sassdoc-extras": "^2.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-latest": "^6.22.0",
+    "node-sass": "^4.11.0",
     "standard": "^8.6.0",
     "uglify-js": "^2.4.15"
   }

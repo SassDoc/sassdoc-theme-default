@@ -26,10 +26,10 @@ assets/js/main.min.js: \
 	cat $^ | uglifyjs > $@
 
 sass:
-	sass --update scss:assets/css --style compressed --sourcemap=none
+	node-sass --output-style compressed scss -o assets/css
 
 sass-dev:
-	sass --update scss:assets/css --style compressed --sourcemap=inline
+	node-sass scss -o assets/css --sourcemap=inline
 
 clean:
 	rm -rf $(DIST) assets/js/main.min.js assets/css
