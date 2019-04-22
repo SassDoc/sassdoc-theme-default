@@ -1,5 +1,4 @@
 <!doctype html>
-
 {% set project_title = "SassDoc" %}
 
 {% if package.name %}
@@ -13,10 +12,9 @@
 <html lang="en">
 <head>
   {# Include head content #}
-  {% include "../includes/partials/head.html.swig" with project_title %}
+  {% include "../includes/partials/head.html.njk" %}
 </head>
 <body>
-
   {# Sidebar #}
   <aside class="sidebar" role="nav">
     {% block sidebar %}{% endblock %}
@@ -26,19 +24,20 @@
   <article class="main" role="main">
 
     {# Include top navbar #}
-    {% include "../includes/partials/header.html.swig" with project_title %}
+    {% include "../includes/partials/header.html.njk" %}
 
     {# Include description #}
-    {% include "../includes/partials/description.html.swig" %}
+    {% include "../includes/partials/description.html.njk" %}
 
+    {# Main content block #}
     {% block content %}{% endblock %}
 
     {# Include footer #}
-    {% include "../includes/partials/footer.html.swig" with project_title %}
+    {% include "../includes/partials/footer.html.njk" %}
   </article>
 
 
   {# Include scripts #}
-  {% include "../includes/partials/scripts.html.swig" %}
+  {% include "../includes/partials/scripts.html.njk" %}
 </body>
 </html>

@@ -1,14 +1,8 @@
 import chroma from 'chroma-js'
-import { Swig } from 'swig'
-import swigExtras from 'swig-extras'
-import swigFilters from 'swig/lib/filters'
+import nunjucks from 'nunjucks'
+import path from 'path'
 
-const swig = new Swig()
-export default swig
-
-swigExtras.useFilter(swig, 'split')
-swigExtras.useFilter(swig, 'trim')
-swigExtras.useFilter(swig, 'groupby')
+let nunjucksEnv = nunjucks.configure(path.resolve(__dirname, '..', 'views'))
 
 const safe = fn =>
   (fn.safe = true) && fn
@@ -25,7 +19,7 @@ const isColor = value => {
 const displayAsType = input =>
   input.split('|')
     .map(x => x.trim())
-    .map(swigFilters.capitalize)
+    .map(nunjucksEnv.getFilter('capitalize'))
     .join('</code> or <code>')
 
 const yiq = ([red, green, blue]) =>
@@ -67,9 +61,26 @@ const maybeYiqContrast = color =>
     ? yiqContrast(hexToRgb(colorToHex(color)))
     : '#000'
 
-swig.setFilter('in', (key, object) => key in object)
-swig.setFilter('is_color', isColor)
-swig.setFilter('display_as_type', safe(displayAsType))
-swig.setFilter('yiq', maybeYiqContrast)
-swig.setFilter('pluralize', pluralize)
-swig.setFilter('unescape', unescape)
+nunjucksEnv.addFilter('in', (key, object) => key in object)
+nunjucksEnv.addFilter('is_color', isColor)
+nunjucksEnv.addFilter('display_as_type', safe(displayAsType))
+nunjucksEnv.addFilter('yiq', maybeYiqContrast)
+nunjucksEnv.addFilter('pluralize', pluralize)
+nunjucksEnv.addFilter('unescape', unescape)
+
+// debug
+nunjucksEnv.addGlobal('debug', function () {
+  return this.ctx
+})
+
+/**
+ * "Warning: The simple API (above; e.g. nunjucks.render) always uses the configuration
+ * from the most recent call to nunjucks.configure. Since this is implicit and can result
+ * in unexpected side effects, use of the simple API is discouraged in most cases
+ * (especially if configure is used); instead, explicitly create an environment using
+ * var env = nunjucks.configure(...) and then call env.render(...) etc."
+ *
+ * @link https://mozilla.github.io/nunjucks/api.html#configure
+ * Investigate why it doesn't work like this if we export nunjucksEnv instead
+ */
+export default nunjucks

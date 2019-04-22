@@ -31,8 +31,7 @@
     "fs-extra": "^2.0.0",
     "html-minifier": "^3.5.21",
     "sassdoc-extras": "^2.5.0",
-    "swig": "1.4.0",
-    "swig-extras": "0.0.1"
+    "nunjucks": "^3.1.7"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
