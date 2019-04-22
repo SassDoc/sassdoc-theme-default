@@ -23,7 +23,7 @@
         {% if group_name in groupDescriptions %}
           <div class="main__description">
             <div class="container">
-              {{ groupDescriptions[group_name] | raw }}
+              {{ groupDescriptions[group_name] | safe }}
             </div>
           </div>
         {% endif %}
