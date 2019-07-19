@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
+## [2.8.3] - 2019-07-19
 ## Fixed
   * Fix parameter annotations `<code>` escaping to to Nunjucks migration.
 
@@ -27,7 +29,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   * Add group description display.
 
-[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.8.2...HEAD
+[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.8.3...HEAD
+[2.8.3]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.3
 [2.8.2]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.2
 [2.8.1]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.1
 [2.8.0]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.0
