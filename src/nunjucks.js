@@ -4,9 +4,6 @@ import path from 'path'
 
 let nunjucksEnv = nunjucks.configure(path.resolve(__dirname, '..', 'views'))
 
-const safe = fn =>
-  (fn.safe = true) && fn
-
 const isColor = value => {
   try {
     chroma(value)
@@ -63,7 +60,7 @@ const maybeYiqContrast = color =>
 
 nunjucksEnv.addFilter('in', (key, object) => key in object)
 nunjucksEnv.addFilter('is_color', isColor)
-nunjucksEnv.addFilter('display_as_type', safe(displayAsType))
+nunjucksEnv.addFilter('display_as_type', displayAsType)
 nunjucksEnv.addFilter('yiq', maybeYiqContrast)
 nunjucksEnv.addFilter('pluralize', pluralize)
 nunjucksEnv.addFilter('unescape', unescape)

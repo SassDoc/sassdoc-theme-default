@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+## Fixed
+  * Fix parameter annotations `<code>` escaping to to Nunjucks migration.
 
 ## [2.8.2] - 2019-05-08
 ### Fixed

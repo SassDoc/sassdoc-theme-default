@@ -21,7 +21,7 @@
               {% if parameter.type == '*' %}
                 Any
               {% else %}
-                {{ parameter.type | display_as_type }}
+                {{ parameter.type | display_as_type | safe }}
               {% endif %}
             </code>
           </td>
