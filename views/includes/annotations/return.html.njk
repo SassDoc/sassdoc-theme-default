@@ -5,7 +5,7 @@
   {% if item.return.type == '*' %}
     Any type
   {% else %}
-    <code>{{ item.return.type | display_as_type }}</code>
+    <code>{{ item.return.type|display_as_type|safe }}</code>
   {% endif %}
   {% if item.return.description %} &mdash; {{ item.return.description|safe }}{% endif %}
   </div>
