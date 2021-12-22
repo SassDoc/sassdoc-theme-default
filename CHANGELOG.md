@@ -7,9 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.8.4] - 2021-12-22
+## Fixed
+  * Multiple `@return` types annotations `<code>` escaping due to Nunjucks migration.
+
 ## [2.8.3] - 2019-07-19
 ## Fixed
-  * Fix parameter annotations `<code>` escaping to to Nunjucks migration.
+  * Fix parameter annotations `<code>` escaping due to Nunjucks migration.
 
 ## [2.8.2] - 2019-05-08
 ### Fixed
@@ -29,7 +33,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   * Add group description display.
 
-[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.8.3...HEAD
+[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.8.4...HEAD
+[2.8.4]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.4
 [2.8.3]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.3
 [2.8.2]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.2
 [2.8.1]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.1
