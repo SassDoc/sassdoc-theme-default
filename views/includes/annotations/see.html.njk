@@ -7,8 +7,13 @@
       <h3 class="item__sub-heading">See</h3>
       <ul class="list-unstyled">
     {% endif %}
+    
+    {% set group_name = '' %}
+    {% if see.group %}
+      {% set group_name = see.group + '-' %}
+    {% endif %}
 
-    <li><span class="item__cross-type">[{{ see.context.type }}]</span> <a href="#{{ see.context.type }}-{{ see.context.name }}"><code>{{ see.context.name | unescape }}</code></a></li>
+    <li><span class="item__cross-type">[{{ see.context.type }}]</span> <a href="#{{ group_name }}{{ see.context.type }}-{{ see.context.name }}"><code>{{ see.context.name | unescape }}</code></a></li>
   {% endif %}
 
 {% endfor %}
