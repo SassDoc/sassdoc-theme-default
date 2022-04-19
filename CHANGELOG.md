@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.8.5] - 2022-04-19
+## Fixed
+  * Support group in `@see` URL. [[#116]](https://github.com/SassDoc/sassdoc-theme-default/pull/116),
+    [[SassDoc/sassdoc#567]](https://github.com/SassDoc/sassdoc/pull/567) and
+    [[SassDoc/sassdoc#465]](https://github.com/SassDoc/sassdoc/pull/465).
+
 ## [2.8.4] - 2021-12-22
 ## Fixed
   * Multiple `@return` types annotations `<code>` escaping due to Nunjucks migration.
@@ -33,7 +39,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   * Add group description display.
 
-[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.8.4...HEAD
+[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.8.5...HEAD
+[2.8.5]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.5
 [2.8.4]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.4
 [2.8.3]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.3
 [2.8.2]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.2
