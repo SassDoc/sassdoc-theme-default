@@ -7,10 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [2.8.6 - 2024-04-06
+## [2.8.6] - 2024-04-06
 ## Fixed
-  *  Add `item.group` to the item heading link.
-   [[#118]](https://github.com/SassDoc/sassdoc-theme-default/pull/118).
+  *  Add `item.group` to the item heading link. 
+  [[#118]](https://github.com/SassDoc/sassdoc-theme-default/pull/118).
 
 ## [2.8.5] - 2022-04-19
 ## Fixed
@@ -44,7 +44,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   * Add group description display.
 
-[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.8.5...HEAD
+[Unreleased]: https://github.com/sassdoc/sassdoc-theme-default/compare/2.8.6...HEAD
+[2.8.6]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.6
 [2.8.5]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.5
 [2.8.4]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.4
 [2.8.3]: https://github.com/sassdoc/sassdoc-theme-default/tags/2.8.3
