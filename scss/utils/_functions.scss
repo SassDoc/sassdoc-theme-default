@@ -30,11 +30,11 @@
 /// @param {Number} $value - Value to clamp between `$min` and `$max`
 /// @param {Number} $min   - Minimum value
 /// @param {Number} $max   - Maximum value
-/// @throws All parameters must be numbers for `clamp`.
+/// @throws All parameters must be numbers for `_clamp`.
 /// @return {Number | Null}
-@function clamp($value, $min, $max) {
+@function _clamp($value, $min, $max) {
   @if type-of($value) != 'number' or type-of($min) != 'number' or type-of($max) != 'number' {
-    @error 'All parameters must be numbers for `clamp`.';
+    @error 'All parameters must be numbers for `_clamp`.';
   }
 
   @return if($value > $max, $max, if($value < $min, $min, $value));

@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /**
  * Univeral box-sizing reset
  */
@@ -37,7 +39,7 @@ a {
  * Vertical rhythm
  */
 table p {
-  margin: 0 0 ($vertical-rhythm / 3);
+  margin: 0 0 math.div($vertical-rhythm, 3);
 }
 
 /**

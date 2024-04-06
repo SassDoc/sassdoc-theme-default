@@ -105,10 +105,10 @@
 /// Mixin for cross-browser opacity (IE 8).
 /// Clamps the value between 0 and 1.
 /// @group cross-browser-support
-/// @requires {function} clamp
+/// @requires {function} _clamp
 /// @param {Number} $opacity - Opacity level, between 0 and 1
 @mixin opacity($opacity) {
-  $opacity: clamp($opacity, 0, 1);
+  $opacity: _clamp($opacity, 0, 1);
   -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})';
   opacity: $opacity;
 }
@@ -126,12 +126,12 @@
 /// Gives a card depth effect.
 /// @param {Number} $depth - depth level [between 1 and 5]
 /// @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
-/// @requires {function} clamp
+/// @requires {function} _clamp
 /// @requires {function} top-shadow
 /// @requires {function} bottom-shadow
 /// @requires {variable} light-grey
 @mixin card($depth) {
-  $depth: clamp($depth, 1, 5);
+  $depth: _clamp($depth, 1, 5);
   box-shadow: bottom-shadow($depth), top-shadow($depth);
   border: 1px solid $light-grey;
 }

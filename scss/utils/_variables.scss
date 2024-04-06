@@ -51,7 +51,7 @@ $medium-grey: #ddd;
 $breakpoints: (
   'small':  (max-width: 800px),
   'medium': (min-width: 801px)
-) !global;
+);
 
 
 /// Z-indexes layers.
@@ -65,7 +65,7 @@ $z-indexes: (
   'social':     3000,
   'default':       1,
   'below':        -1
-) !global;
+);
 
 
 /// Sidebar width

@@ -22,6 +22,7 @@
     "LICENSE.md",
     "README.md"
   ],
+  "packageManager": "yarn@1.22.22+sha256.c17d3797fb9a9115bf375e31bfd30058cac6bc9c3b8807a3d8cb2094794b51ca",
   "dependencies": {
     "babel-runtime": "^6.22.0",
     "chroma-js": "^1.2.2",
@@ -37,7 +38,7 @@
     "babel-cli": "^6.22.2",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-latest": "^6.22.0",
-    "node-sass": "^4.11.0",
+    "sass": "^1.74.1",
     "standard": "^8.6.0",
     "uglify-js": "^2.4.15"
   }
