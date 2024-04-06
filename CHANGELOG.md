@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.8.6 - 2024-04-06
+## Fixed
+  *  Add `item.group` to the item heading link.
+   [[#118]](https://github.com/SassDoc/sassdoc-theme-default/pull/118).
+
 ## [2.8.5] - 2022-04-19
 ## Fixed
   * Support group in `@see` URL. [[#116]](https://github.com/SassDoc/sassdoc-theme-default/pull/116),
